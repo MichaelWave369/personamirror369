@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.4.0 — Society Pressure Layer
+
+- Added Group Pretending Simulator.
+- Added Group Pretending Field scoring.
+- Added example false-norm scenarios for work, family, online crowds, and communities.
+- Added Anti-Manipulation Mode.
+- Added Manipulation Pressure scoring.
+- Added red-flag cards for shame hooks, false urgency, isolation pressure, approval bait, false choice, and blocked repair.
+- Added consent and clarity stabilizers.
+- Wired v0.4 modules into the app navigation and hero.
+- Added a dedicated v0.4 stylesheet layer.
+- Updated README and package version.
+
 ## v0.3.0 — Reflection Engine
 
 - Added Frontstage / Backstage Map.
