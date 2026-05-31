@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
 import { masks } from '../data/masks';
 
+const LOCAL_REPORT_KEY = 'personamirror369.localReflectionReport.v1';
+
 const roomOptions = [
   'Alone',
   'Family',
@@ -32,6 +34,20 @@ const nextStepOptions = [
   'Leave the unsafe room.',
 ];
 
+interface ReportDraft {
+  schemaVersion: 1;
+  savedAt: string;
+  reportTitle: string;
+  primaryRoom: string;
+  primaryMaskId: string;
+  pressureSignal: string;
+  nextStep: string;
+  frontstageSummary: string;
+  backstageSummary: string;
+  truthSafetyNeed: string;
+  supportPlan: string;
+}
+
 export function LocalReflectionReport() {
   const [reportTitle, setReportTitle] = useState('PersonaMirror369 Local Reflection Report');
   const [primaryRoom, setPrimaryRoom] = useState(roomOptions[1]);
@@ -42,9 +58,37 @@ export function LocalReflectionReport() {
   const [backstageSummary, setBackstageSummary] = useState('');
   const [truthSafetyNeed, setTruthSafetyNeed] = useState('');
   const [supportPlan, setSupportPlan] = useState('');
+  const [importJson, setImportJson] = useState('');
   const [status, setStatus] = useState('');
 
   const selectedMask = masks.find((mask) => mask.id === primaryMaskId) ?? masks[0];
+
+  const draft = useMemo<ReportDraft>(
+    () => ({
+      schemaVersion: 1,
+      savedAt: new Date().toISOString(),
+      reportTitle,
+      primaryRoom,
+      primaryMaskId,
+      pressureSignal,
+      nextStep,
+      frontstageSummary,
+      backstageSummary,
+      truthSafetyNeed,
+      supportPlan,
+    }),
+    [
+      backstageSummary,
+      frontstageSummary,
+      nextStep,
+      pressureSignal,
+      primaryMaskId,
+      primaryRoom,
+      reportTitle,
+      supportPlan,
+      truthSafetyNeed,
+    ],
+  );
 
   const report = useMemo(() => {
     const today = new Date().toLocaleDateString();
@@ -104,6 +148,18 @@ export function LocalReflectionReport() {
     truthSafetyNeed,
   ]);
 
+  function applyDraft(nextDraft: Partial<ReportDraft>) {
+    setReportTitle(safeString(nextDraft.reportTitle, 'PersonaMirror369 Local Reflection Report'));
+    setPrimaryRoom(safeString(nextDraft.primaryRoom, roomOptions[1]));
+    setPrimaryMaskId(safeString(nextDraft.primaryMaskId, masks[0]?.id ?? 'pleaser'));
+    setPressureSignal(safeString(nextDraft.pressureSignal, pressureOptions[2]));
+    setNextStep(safeString(nextDraft.nextStep, nextStepOptions[0]));
+    setFrontstageSummary(safeString(nextDraft.frontstageSummary, ''));
+    setBackstageSummary(safeString(nextDraft.backstageSummary, ''));
+    setTruthSafetyNeed(safeString(nextDraft.truthSafetyNeed, ''));
+    setSupportPlan(safeString(nextDraft.supportPlan, ''));
+  }
+
   async function copyReport() {
     try {
       await navigator.clipboard.writeText(report);
@@ -113,32 +169,98 @@ export function LocalReflectionReport() {
     }
   }
 
-  function downloadReport() {
-    const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'personamirror369-local-reflection-report.txt';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
-    setStatus('Downloaded local reflection report.');
+  function downloadTextReport() {
+    downloadFile('personamirror369-local-reflection-report.txt', report, 'text/plain;charset=utf-8');
+    setStatus('Downloaded local reflection report as .txt.');
+  }
+
+  function downloadMarkdownReport() {
+    downloadFile('personamirror369-local-reflection-report.md', report, 'text/markdown;charset=utf-8');
+    setStatus('Downloaded local reflection report as Markdown.');
+  }
+
+  function downloadJsonDraft() {
+    downloadFile(
+      'personamirror369-local-reflection-draft.json',
+      JSON.stringify(draft, null, 2),
+      'application/json;charset=utf-8',
+    );
+    setStatus('Downloaded portable JSON draft.');
+  }
+
+  function saveDraftLocally() {
+    localStorage.setItem(LOCAL_REPORT_KEY, JSON.stringify(draft));
+    setStatus('Saved draft locally in this browser.');
+  }
+
+  function loadDraftLocally() {
+    const saved = localStorage.getItem(LOCAL_REPORT_KEY);
+    if (!saved) {
+      setStatus('No local draft found in this browser.');
+      return;
+    }
+
+    try {
+      const parsed = JSON.parse(saved) as Partial<ReportDraft>;
+      applyDraft(parsed);
+      setStatus('Loaded local browser draft.');
+    } catch {
+      setStatus('Local draft could not be read. It may be corrupted or from an older version.');
+    }
+  }
+
+  function clearLocalDraft() {
+    localStorage.removeItem(LOCAL_REPORT_KEY);
+    setStatus('Cleared saved local browser draft. The current on-screen form was not erased.');
+  }
+
+  function importJsonDraft() {
+    try {
+      const parsed = JSON.parse(importJson) as Partial<ReportDraft>;
+      applyDraft(parsed);
+      setStatus('Imported JSON draft into the report form.');
+    } catch {
+      setStatus('Could not import JSON. Check that the pasted draft is valid JSON.');
+    }
+  }
+
+  function printReport() {
+    window.print();
+    setStatus('Opened browser print dialog.');
   }
 
   return (
     <section id="local-report" className="panel interactive-panel report-panel">
       <div className="panel-heading">
-        <p className="section-kicker">Local Reflection Report</p>
-        <h2>Turn the session into a private, copyable report.</h2>
+        <p className="section-kicker">Local Report Vault</p>
+        <h2>Save, export, import, print, or delete the reflection locally.</h2>
         <p>
           Nothing is uploaded here. The report is generated in your browser so you can copy it,
-          download it, or delete it without creating an account.
+          download it, save it locally, or clear it without creating an account.
         </p>
       </div>
 
       <div className="report-grid">
         <div className="report-form">
+          <div className="mini-summary-card">
+            <h3>Local-first vault controls</h3>
+            <p>
+              Save keeps one draft in this browser using localStorage. JSON export creates a portable
+              file you control. Clear removes the saved browser draft only.
+            </p>
+            <div className="report-actions">
+              <button type="button" onClick={saveDraftLocally}>
+                Save local draft
+              </button>
+              <button type="button" onClick={loadDraftLocally}>
+                Load local draft
+              </button>
+              <button type="button" onClick={clearLocalDraft}>
+                Clear saved draft
+              </button>
+            </div>
+          </div>
+
           <label className="text-field">
             <span>Report title</span>
             <input value={reportTitle} onChange={(event) => setReportTitle(event.target.value)} />
@@ -224,6 +346,20 @@ export function LocalReflectionReport() {
               placeholder="Who or what supports the next step? What repair path is available?"
             />
           </label>
+
+          <label className="text-field">
+            <span>Import JSON draft</span>
+            <textarea
+              value={importJson}
+              onChange={(event) => setImportJson(event.target.value)}
+              placeholder="Paste a previously exported PersonaMirror369 JSON draft here."
+            />
+          </label>
+          <div className="report-actions">
+            <button type="button" onClick={importJsonDraft}>
+              Import pasted JSON
+            </button>
+          </div>
         </div>
 
         <article className="report-preview-card">
@@ -236,8 +372,17 @@ export function LocalReflectionReport() {
             <button type="button" onClick={copyReport}>
               Copy report
             </button>
-            <button type="button" onClick={downloadReport}>
+            <button type="button" onClick={downloadTextReport}>
               Download .txt
+            </button>
+            <button type="button" onClick={downloadMarkdownReport}>
+              Download .md
+            </button>
+            <button type="button" onClick={downloadJsonDraft}>
+              Export JSON
+            </button>
+            <button type="button" onClick={printReport}>
+              Print
             </button>
           </div>
           {status ? <p className="report-status">{status}</p> : null}
@@ -245,4 +390,20 @@ export function LocalReflectionReport() {
       </div>
     </section>
   );
+}
+
+function safeString(value: unknown, fallback: string): string {
+  return typeof value === 'string' ? value : fallback;
+}
+
+function downloadFile(filename: string, content: string, type: string) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }
