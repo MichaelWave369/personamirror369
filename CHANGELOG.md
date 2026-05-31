@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.8.0 — Daily Mirror Deck
+
+- Added Daily Mirror Deck for daily-return reflection.
+- Added deterministic Today’s Card based on the current date.
+- Added random draw and next-card controls.
+- Added full deck mini-card selector.
+- Added copyable mirror-card insight.
+- Added Carry to Vault bridge.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v0.7.0 — Guided Practice Mode
 
 - Added Guided Practice Mode for first-time and returning users.
