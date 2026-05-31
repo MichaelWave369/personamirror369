@@ -27,6 +27,7 @@ PersonaMirror369 is designed for:
 - workplace honesty tools
 - truth-safety mapping
 - consent-based personal growth
+- private local reflection reports
 
 It is not designed for:
 
@@ -50,6 +51,7 @@ It is not designed for:
 | Safe Truth Planner | Helps choose gentle, non-coercive truth actions | Interactive v0.3 |
 | Group Pretending Simulator | Models how false norms spread through silence and fear | Interactive v0.4 |
 | Anti-Manipulation Mode | Helps users detect when others are pressuring them into a mask | Interactive v0.4 |
+| Local Reflection Report | Generates copyable/downloadable local reports | Interactive v0.5 |
 
 ## Formula Seeds
 
@@ -125,7 +127,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v0.4 society pressure layer`
+Version: `v0.5 local reflection reports`
 
 This repo currently contains:
 
@@ -141,6 +143,7 @@ This repo currently contains:
 - Safe Truth Planner
 - Group Pretending Simulator
 - Anti-Manipulation Mode
+- Local Reflection Report generator
 - GitHub Pages workflow
 - TypeScript data model for masks and formulas
 
