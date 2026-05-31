@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.3.0 — Reflection Engine
+
+- Added Frontstage / Backstage Map.
+- Added room-based Coherence Delta scoring.
+- Added context tabs for Alone, Family, Work, Online, Faith / Community, Friends, and Strangers.
+- Added editable frontstage, backstage, and truth-safety reflection fields.
+- Added Safe Truth Planner.
+- Added Truth Readiness scoring.
+- Added safe action menu for pause, journal, ask consent, speak small truth, boundary, repair, support, and leave unsafe room.
+- Updated app navigation and hero messaging.
+- Updated README and package version.
+
 ## v0.2.0 — Interactive Build
 
 - Added interactive Pretending Force Meter.
