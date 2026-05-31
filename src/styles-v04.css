@@ -10,7 +10,10 @@
 .guided-card,
 .pathway-button,
 .guided-step,
-.guided-completion-card {
+.guided-completion-card,
+.mirror-card-feature,
+.deck-meaning-card,
+.deck-mini-card {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--panel);
@@ -45,7 +48,11 @@
 .guided-card blockquote,
 .guided-step p,
 .guided-step em,
-.guided-completion-card p {
+.guided-completion-card p,
+.mirror-card-feature p,
+.mirror-card-feature blockquote,
+.deck-meaning-card p,
+.deck-mini-card strong {
   color: var(--muted);
   line-height: 1.6;
 }
@@ -65,8 +72,90 @@
   margin-bottom: 0;
 }
 
+.deck-panel,
 .guided-panel {
   scroll-margin-top: 96px;
+}
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.mirror-card-feature {
+  min-height: 100%;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(243, 201, 105, 0.14), transparent 18rem),
+    linear-gradient(145deg, rgba(169, 145, 255, 0.14), rgba(239, 159, 188, 0.09));
+}
+
+.mirror-card-feature h3 {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+  margin-bottom: 14px;
+}
+
+.deck-archetype {
+  color: var(--gold) !important;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.deck-actions {
+  margin-top: 22px;
+}
+
+.deck-meaning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.deck-meaning-card {
+  padding: 20px;
+}
+
+.deck-meaning-card h4,
+.guided-step h4,
+.guided-completion-card h4 {
+  margin: 0 0 6px;
+  color: #fff5d6;
+  font-size: 1.05rem;
+}
+
+.deck-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.deck-mini-card {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  color: #f7f1e8;
+  text-align: left;
+}
+
+.deck-mini-card.active,
+.deck-mini-card:hover {
+  background: rgba(243, 201, 105, 0.14);
+  border-color: rgba(243, 201, 105, 0.34);
+}
+
+.deck-mini-card span {
+  font-weight: 900;
+}
+
+.deck-mini-card strong {
+  font-size: 0.78rem;
 }
 
 .guided-grid {
@@ -142,13 +231,6 @@
   color: #170f1f;
   background: var(--gold);
   font-weight: 900;
-}
-
-.guided-step h4,
-.guided-completion-card h4 {
-  margin: 0 0 6px;
-  color: #fff5d6;
-  font-size: 1.05rem;
 }
 
 .guided-step p,
@@ -248,7 +330,8 @@
 
 @media (max-width: 1100px) {
   .society-grid,
-  .scenario-strip {
+  .scenario-strip,
+  .deck-strip {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -259,7 +342,8 @@
 
 @media (max-width: 980px) {
   .report-grid,
-  .guided-grid {
+  .guided-grid,
+  .deck-grid {
     grid-template-columns: 1fr;
   }
 
@@ -270,7 +354,9 @@
 
 @media (max-width: 860px) {
   .society-grid,
-  .scenario-strip {
+  .scenario-strip,
+  .deck-strip,
+  .deck-meaning-grid {
     grid-template-columns: 1fr;
   }
 
