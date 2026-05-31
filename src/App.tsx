@@ -3,6 +3,7 @@ import { Eye, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
 import { AntiManipulationMode } from './components/AntiManipulationMode';
 import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { GroupPretendingSimulator } from './components/GroupPretendingSimulator';
+import { LocalReflectionReport } from './components/LocalReflectionReport';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
 import { PretendingForceMeter } from './components/PretendingForceMeter';
 import { SafeTruthPlanner } from './components/SafeTruthPlanner';
@@ -18,22 +19,23 @@ export function App() {
         <a href="#truth-planner">Truth Planner</a>
         <a href="#group-field">Group Field</a>
         <a href="#anti-manipulation">Anti-Manipulation</a>
+        <a href="#local-report">Report</a>
         <a href="#atlas">Mask Atlas</a>
       </nav>
 
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.4 society pressure layer
+          v0.5 local reflection report
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Map personal masks, detect group pretending fields, and recognize coercive pressure without
-          shame, paranoia, exposure, or manipulation.
+          Map personal masks, detect group pretending fields, recognize coercive pressure, and turn
+          the session into a private local report without accounts, cloud storage, or tracking.
         </p>
         <div className="hero-actions">
-          <a href="#group-field">Simulate a Group Field</a>
+          <a href="#local-report">Create a Local Report</a>
           <a href="#anti-manipulation" className="secondary">Open Anti-Manipulation Mode</a>
         </div>
       </section>
@@ -62,6 +64,7 @@ export function App() {
       <SafeTruthPlanner />
       <GroupPretendingSimulator />
       <AntiManipulationMode />
+      <LocalReflectionReport />
 
       <section id="atlas" className="atlas-section">
         <p className="section-kicker">Mask Atlas</p>
