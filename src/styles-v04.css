@@ -1,0 +1,79 @@
+.society-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.society-score-card,
+.scenario-card {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--panel);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.society-score-card {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  min-height: 100%;
+  padding: 28px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(169, 145, 255, 0.16), rgba(243, 201, 105, 0.1));
+}
+
+.society-score-card.protective-card {
+  background: linear-gradient(145deg, rgba(239, 159, 188, 0.14), rgba(169, 145, 255, 0.12));
+}
+
+.society-score-card strong {
+  display: block;
+  font-size: 4rem;
+  letter-spacing: -0.07em;
+}
+
+.society-score-card p,
+.society-score-card blockquote,
+.scenario-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.scenario-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.scenario-card {
+  padding: 18px;
+}
+
+.scenario-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .society-grid,
+  .scenario-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .society-score-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 860px) {
+  .society-grid,
+  .scenario-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .society-score-card {
+    grid-column: auto;
+  }
+}
