@@ -19,23 +19,23 @@ export function App() {
         <a href="#truth-planner">Truth Planner</a>
         <a href="#group-field">Group Field</a>
         <a href="#anti-manipulation">Anti-Manipulation</a>
-        <a href="#local-report">Report</a>
+        <a href="#local-report">Vault</a>
         <a href="#atlas">Mask Atlas</a>
       </nav>
 
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.5 local reflection report
+          v0.6 local report vault
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Map personal masks, detect group pretending fields, recognize coercive pressure, and turn
-          the session into a private local report without accounts, cloud storage, or tracking.
+          Map personal masks, detect group pretending fields, recognize coercive pressure, and save
+          portable local reflection drafts without accounts, cloud storage, or tracking.
         </p>
         <div className="hero-actions">
-          <a href="#local-report">Create a Local Report</a>
+          <a href="#local-report">Open the Local Vault</a>
           <a href="#anti-manipulation" className="secondary">Open Anti-Manipulation Mode</a>
         </div>
       </section>
