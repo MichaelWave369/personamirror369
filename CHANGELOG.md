@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.7.0 — Guided Practice Mode
+
+- Added Guided Practice Mode for first-time and returning users.
+- Added five short practice pathways: 3-Minute Mask Check, Family Room Reset, Online Pressure Reset, Work Truth-Safety Check, and Coercive Pressure First Aid.
+- Added step completion tracking with pathway progress.
+- Added reset control for each pathway.
+- Added completion lines and micro-actions for safer reflection.
+- Added link from guided practice into the Local Report Vault.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v0.6.0 — Local Report Vault
 
 - Upgraded Local Reflection Report into Local Report Vault.
