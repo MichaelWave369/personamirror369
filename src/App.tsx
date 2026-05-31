@@ -3,6 +3,7 @@ import { Eye, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
 import { AntiManipulationMode } from './components/AntiManipulationMode';
 import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { GroupPretendingSimulator } from './components/GroupPretendingSimulator';
+import { GuidedPracticeMode } from './components/GuidedPracticeMode';
 import { LocalReflectionReport } from './components/LocalReflectionReport';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
 import { PretendingForceMeter } from './components/PretendingForceMeter';
@@ -13,6 +14,7 @@ export function App() {
   return (
     <main className="app-shell">
       <nav className="top-nav" aria-label="Primary navigation">
+        <a href="#guided-practice">Practice</a>
         <a href="#engine">Pretending Force</a>
         <a href="#mask-load">Mask Load</a>
         <a href="#frontstage">Rooms</a>
@@ -26,17 +28,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.6 local report vault
+          v0.7 guided practice mode
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Map personal masks, detect group pretending fields, recognize coercive pressure, and save
-          portable local reflection drafts without accounts, cloud storage, or tracking.
+          Start with a gentle pathway, map personal masks, detect group pretending fields, recognize
+          coercive pressure, and save portable local reflection drafts without accounts or tracking.
         </p>
         <div className="hero-actions">
-          <a href="#local-report">Open the Local Vault</a>
-          <a href="#anti-manipulation" className="secondary">Open Anti-Manipulation Mode</a>
+          <a href="#guided-practice">Start Guided Practice</a>
+          <a href="#local-report" className="secondary">Open the Local Vault</a>
         </div>
       </section>
 
@@ -58,6 +60,7 @@ export function App() {
         />
       </section>
 
+      <GuidedPracticeMode />
       <PretendingForceMeter />
       <MaskLoadCalculator />
       <FrontstageBackstageMap />
