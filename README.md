@@ -48,8 +48,8 @@ It is not designed for:
 | Coherence Delta | Maps distance between private truth and public performance | Interactive v0.3 |
 | Frontstage / Backstage Map | Reflection tool for different social settings | Interactive v0.3 |
 | Safe Truth Planner | Helps choose gentle, non-coercive truth actions | Interactive v0.3 |
-| Group Pretending Simulator | Models how false norms spread through silence and fear | Planned v0.4 |
-| Anti-Manipulation Mode | Helps users detect when others are pressuring them into a mask | Planned v0.4 |
+| Group Pretending Simulator | Models how false norms spread through silence and fear | Interactive v0.4 |
+| Anti-Manipulation Mode | Helps users detect when others are pressuring them into a mask | Interactive v0.4 |
 
 ## Formula Seeds
 
@@ -104,6 +104,18 @@ CD = |Performance Intensity - Private Truth Clarity| + Safety Pressure
 STR = urgency + safety + consent + support + repair - consequence risk
 ```
 
+### Group Pretending Field
+
+```txt
+GPF = private disagreement + public conformity + punishment + visibility + imitation - trust density
+```
+
+### Manipulation Pressure
+
+```txt
+MP = shame + fear urgency + isolation + approval bait + false choice + blocked repair - consent - clarity
+```
+
 ## Core Distinction
 
 ```txt
@@ -113,7 +125,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v0.3 reflection engine`
+Version: `v0.4 society pressure layer`
 
 This repo currently contains:
 
@@ -127,6 +139,8 @@ This repo currently contains:
 - interactive Mask Load Calculator
 - Frontstage / Backstage Map
 - Safe Truth Planner
+- Group Pretending Simulator
+- Anti-Manipulation Mode
 - GitHub Pages workflow
 - TypeScript data model for masks and formulas
 
