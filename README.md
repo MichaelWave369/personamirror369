@@ -40,16 +40,16 @@ It is not designed for:
 
 ## Project Modules
 
-| Module | Purpose |
-|---|---|
-| Mask Atlas | Taxonomy of common social masks |
-| Pretending Force Engine | Formula system for social/persona pressure |
-| Mask Load Model | Measures intensity, frequency, rigidity, truth-distance, and duration |
-| Coherence Delta | Maps distance between private truth and public performance |
-| Frontstage / Backstage Map | Reflection tool for different social settings |
-| Safe Truth Planner | Helps choose gentle, non-coercive truth actions |
-| Group Pretending Simulator | Models how false norms spread through silence and fear |
-| Anti-Manipulation Mode | Helps users detect when others are pressuring them into a mask |
+| Module | Purpose | Status |
+|---|---|---|
+| Mask Atlas | Taxonomy of common social masks | Implemented v0.1 |
+| Pretending Force Engine | Formula system for social/persona pressure | Interactive v0.2 |
+| Mask Load Model | Measures intensity, frequency, rigidity, truth-distance, and duration | Interactive v0.2 |
+| Coherence Delta | Maps distance between private truth and public performance | Planned v0.3 |
+| Frontstage / Backstage Map | Reflection tool for different social settings | Planned v0.3 |
+| Safe Truth Planner | Helps choose gentle, non-coercive truth actions | Planned v0.3 |
+| Group Pretending Simulator | Models how false norms spread through silence and fear | Planned v0.3+ |
+| Anti-Manipulation Mode | Helps users detect when others are pressuring them into a mask | Planned v0.4 |
 
 ## Formula Seeds
 
@@ -101,7 +101,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v0.1 genesis scaffold`
+Version: `v0.2 interactive build`
 
 This repo currently contains:
 
@@ -110,7 +110,10 @@ This repo currently contains:
 - ethics and boundary document
 - mask taxonomy
 - product spec
-- starter React/Vite app structure
+- Vite / React / TypeScript app
+- interactive Pretending Force Meter
+- interactive Mask Load Calculator
+- GitHub Pages workflow
 - TypeScript data model for masks and formulas
 
 ## Local Development
@@ -122,9 +125,22 @@ npm run dev
 
 Then open the local URL shown by Vite.
 
-## GitHub Pages Direction
+## Build
 
-This project is intended to be deployable as a static React app via GitHub Pages or another static host.
+```bash
+npm run build
+npm run preview
+```
+
+## GitHub Pages
+
+The app is configured for GitHub Pages at:
+
+```txt
+https://michaelwave369.github.io/personamirror369/
+```
+
+After the workflow runs, make sure the repository Pages settings use **GitHub Actions** as the deployment source.
 
 ## Claim Discipline
 
