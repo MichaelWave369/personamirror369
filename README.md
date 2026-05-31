@@ -20,6 +20,7 @@ This project is not for controlling people, exposing people, diagnosing people, 
 PersonaMirror369 is designed for:
 
 - self-reflection
+- guided personal practice
 - social literacy
 - anti-manipulation education
 - humane AI companion design
@@ -54,6 +55,7 @@ It is not designed for:
 | Anti-Manipulation Mode | Helps users detect when others are pressuring them into a mask | Interactive v0.4 |
 | Local Reflection Report | Generates copyable/downloadable local reports | Interactive v0.5 |
 | Local Report Vault | LocalStorage save/load/clear plus JSON import/export and print | Interactive v0.6 |
+| Guided Practice Mode | Short first-time-user pathways for safe mask reflection | Interactive v0.7 |
 
 ## Formula Seeds
 
@@ -129,7 +131,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v0.6 local report vault`
+Version: `v0.7 guided practice mode`
 
 This repo currently contains:
 
@@ -147,6 +149,7 @@ This repo currently contains:
 - Anti-Manipulation Mode
 - Local Reflection Report generator
 - Local Report Vault save/load/export/import/print tools
+- Guided Practice Mode pathways
 - GitHub Pages workflow
 - TypeScript data model for masks and formulas
 
