@@ -1,27 +1,23 @@
-import { Brain, Eye, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
+import type { ReactNode } from 'react';
+import { Eye, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
+import { MaskLoadCalculator } from './components/MaskLoadCalculator';
+import { PretendingForceMeter } from './components/PretendingForceMeter';
 import { masks } from './data/masks';
-import { describePretendingForce, scorePretendingForce } from './data/formulas';
-
-const starterScore = scorePretendingForce({
-  shameRisk: 0.72,
-  belongingRisk: 0.68,
-  punishmentRisk: 0.42,
-  financialSurvivalRisk: 0.36,
-  approvalReward: 0.7,
-  egoReward: 0.55,
-  truthSafety: 0.38,
-  selfCompassion: 0.44,
-  privateCoherence: 0.5,
-  repairCapacity: 0.31,
-});
 
 export function App() {
   return (
     <main className="app-shell">
+      <nav className="top-nav" aria-label="Primary navigation">
+        <a href="#engine">Pretending Force</a>
+        <a href="#mask-load">Mask Load</a>
+        <a href="#atlas">Mask Atlas</a>
+        <a href="#ethics">Ethics</a>
+      </nav>
+
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.1 genesis scaffold
+          v0.2 interactive build
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
@@ -30,12 +26,12 @@ export function App() {
           coercion, exposure, or manipulation.
         </p>
         <div className="hero-actions">
-          <a href="#atlas">Explore the Mask Atlas</a>
-          <a href="#engine" className="secondary">View the Pretending Force Engine</a>
+          <a href="#engine">Try the Pretending Force Meter</a>
+          <a href="#mask-load" className="secondary">Open the Mask Load Calculator</a>
         </div>
       </section>
 
-      <section className="principles-grid" aria-label="Ethical principles">
+      <section id="ethics" className="principles-grid" aria-label="Ethical principles">
         <PrincipleCard
           icon={<ShieldCheck />}
           title="Consent First"
@@ -53,23 +49,8 @@ export function App() {
         />
       </section>
 
-      <section id="engine" className="panel engine-panel">
-        <div>
-          <p className="section-kicker">Pretending Force Engine</p>
-          <h2>When pressure rises, the mask tightens.</h2>
-          <p>
-            Pretending Force estimates the pressure pushing a person away from private truth and
-            into performance, silence, conformity, or false certainty.
-          </p>
-          <pre>{'PF = (SR + BR + PR + FR + AR + ER) - (TS + SC + PC + RC)'}</pre>
-        </div>
-        <div className="score-card">
-          <Brain size={34} />
-          <span className="score-label">Demo Pretending Force</span>
-          <strong>{Math.round(starterScore * 100)}%</strong>
-          <p>{describePretendingForce(starterScore)}</p>
-        </div>
-      </section>
+      <PretendingForceMeter />
+      <MaskLoadCalculator />
 
       <section id="atlas" className="atlas-section">
         <p className="section-kicker">Mask Atlas</p>
@@ -106,7 +87,7 @@ export function App() {
   );
 }
 
-function PrincipleCard({ icon, title, body }: { icon: React.ReactNode; title: string; body: string }) {
+function PrincipleCard({ icon, title, body }: { icon: ReactNode; title: string; body: string }) {
   return (
     <article className="principle-card">
       <div className="principle-icon">{icon}</div>
