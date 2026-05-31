@@ -45,10 +45,10 @@ It is not designed for:
 | Mask Atlas | Taxonomy of common social masks | Implemented v0.1 |
 | Pretending Force Engine | Formula system for social/persona pressure | Interactive v0.2 |
 | Mask Load Model | Measures intensity, frequency, rigidity, truth-distance, and duration | Interactive v0.2 |
-| Coherence Delta | Maps distance between private truth and public performance | Planned v0.3 |
-| Frontstage / Backstage Map | Reflection tool for different social settings | Planned v0.3 |
-| Safe Truth Planner | Helps choose gentle, non-coercive truth actions | Planned v0.3 |
-| Group Pretending Simulator | Models how false norms spread through silence and fear | Planned v0.3+ |
+| Coherence Delta | Maps distance between private truth and public performance | Interactive v0.3 |
+| Frontstage / Backstage Map | Reflection tool for different social settings | Interactive v0.3 |
+| Safe Truth Planner | Helps choose gentle, non-coercive truth actions | Interactive v0.3 |
+| Group Pretending Simulator | Models how false norms spread through silence and fear | Planned v0.4 |
 | Anti-Manipulation Mode | Helps users detect when others are pressuring them into a mask | Planned v0.4 |
 
 ## Formula Seeds
@@ -92,7 +92,19 @@ D  = Distance from inner truth
 T  = Time worn
 ```
 
-### Core Distinction
+### Coherence Delta
+
+```txt
+CD = |Performance Intensity - Private Truth Clarity| + Safety Pressure
+```
+
+### Safe Truth Readiness
+
+```txt
+STR = urgency + safety + consent + support + repair - consequence risk
+```
+
+## Core Distinction
 
 ```txt
 Protective Mask = conscious + temporary + useful + removable
@@ -101,7 +113,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v0.2 interactive build`
+Version: `v0.3 reflection engine`
 
 This repo currently contains:
 
@@ -113,6 +125,8 @@ This repo currently contains:
 - Vite / React / TypeScript app
 - interactive Pretending Force Meter
 - interactive Mask Load Calculator
+- Frontstage / Backstage Map
+- Safe Truth Planner
 - GitHub Pages workflow
 - TypeScript data model for masks and formulas
 
