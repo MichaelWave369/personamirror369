@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.6.0 — Local Report Vault
+
+- Upgraded Local Reflection Report into Local Report Vault.
+- Added explicit localStorage save, load, and clear controls.
+- Added portable JSON draft export.
+- Added pasted JSON draft import.
+- Added Markdown `.md` report export.
+- Added browser print action.
+- Added safer draft parsing fallbacks for imported or locally saved drafts.
+- Updated hero copy, navigation label, README, and package version.
+
 ## v0.5.0 — Local Reflection Reports
 
 - Added Local Reflection Report generator.
