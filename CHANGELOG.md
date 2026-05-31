@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.5.0 — Local Reflection Reports
+
+- Added Local Reflection Report generator.
+- Added browser-only report composer with title, room, mask, pressure signal, next step, frontstage summary, backstage summary, truth safety need, and support plan.
+- Added copy-to-clipboard action with fallback message.
+- Added downloadable `.txt` report export.
+- Added report preview panel.
+- Added privacy language directly in the UI and generated report.
+- Wired report section into the app navigation and hero.
+- Updated README and package version.
+
 ## v0.4.0 — Society Pressure Layer
 
 - Added Group Pretending Simulator.
