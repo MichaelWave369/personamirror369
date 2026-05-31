@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Eye, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
 import { AntiManipulationMode } from './components/AntiManipulationMode';
+import { DailyMirrorDeck } from './components/DailyMirrorDeck';
 import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { GroupPretendingSimulator } from './components/GroupPretendingSimulator';
 import { GuidedPracticeMode } from './components/GuidedPracticeMode';
@@ -14,6 +15,7 @@ export function App() {
   return (
     <main className="app-shell">
       <nav className="top-nav" aria-label="Primary navigation">
+        <a href="#daily-deck">Daily Card</a>
         <a href="#guided-practice">Practice</a>
         <a href="#engine">Pretending Force</a>
         <a href="#mask-load">Mask Load</a>
@@ -28,17 +30,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.7 guided practice mode
+          v0.8 daily mirror deck
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Start with a gentle pathway, map personal masks, detect group pretending fields, recognize
-          coercive pressure, and save portable local reflection drafts without accounts or tracking.
+          Pull a daily mirror card, start a guided pathway, map personal masks, recognize coercive
+          pressure, and save portable local reflection drafts without accounts or tracking.
         </p>
         <div className="hero-actions">
-          <a href="#guided-practice">Start Guided Practice</a>
-          <a href="#local-report" className="secondary">Open the Local Vault</a>
+          <a href="#daily-deck">Pull Today’s Card</a>
+          <a href="#guided-practice" className="secondary">Start Guided Practice</a>
         </div>
       </section>
 
@@ -60,6 +62,7 @@ export function App() {
         />
       </section>
 
+      <DailyMirrorDeck />
       <GuidedPracticeMode />
       <PretendingForceMeter />
       <MaskLoadCalculator />
