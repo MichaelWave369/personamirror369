@@ -21,6 +21,7 @@ PersonaMirror369 is designed for:
 
 - self-reflection
 - guided personal practice
+- daily mirror-card reflection
 - social literacy
 - anti-manipulation education
 - humane AI companion design
@@ -56,6 +57,7 @@ It is not designed for:
 | Local Reflection Report | Generates copyable/downloadable local reports | Interactive v0.5 |
 | Local Report Vault | LocalStorage save/load/clear plus JSON import/export and print | Interactive v0.6 |
 | Guided Practice Mode | Short first-time-user pathways for safe mask reflection | Interactive v0.7 |
+| Daily Mirror Deck | Daily deterministic card, random draw, copy insight, and Vault bridge | Interactive v0.8 |
 
 ## Formula Seeds
 
@@ -131,7 +133,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v0.7 guided practice mode`
+Version: `v0.8 daily mirror deck`
 
 This repo currently contains:
 
@@ -141,6 +143,7 @@ This repo currently contains:
 - mask taxonomy
 - product spec
 - Vite / React / TypeScript app
+- Daily Mirror Deck
 - interactive Pretending Force Meter
 - interactive Mask Load Calculator
 - Frontstage / Backstage Map
