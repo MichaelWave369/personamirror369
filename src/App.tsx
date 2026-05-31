@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
 import { Eye, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
+import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
 import { PretendingForceMeter } from './components/PretendingForceMeter';
+import { SafeTruthPlanner } from './components/SafeTruthPlanner';
 import { masks } from './data/masks';
 
 export function App() {
@@ -10,6 +12,8 @@ export function App() {
       <nav className="top-nav" aria-label="Primary navigation">
         <a href="#engine">Pretending Force</a>
         <a href="#mask-load">Mask Load</a>
+        <a href="#frontstage">Rooms</a>
+        <a href="#truth-planner">Truth Planner</a>
         <a href="#atlas">Mask Atlas</a>
         <a href="#ethics">Ethics</a>
       </nav>
@@ -17,17 +21,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.2 interactive build
+          v0.3 reflection engine
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Map social masks, measure pretending pressure, and practice safer truth without shame,
-          coercion, exposure, or manipulation.
+          Map social masks, measure pretending pressure, compare frontstage and backstage selves,
+          and choose safer truth-actions without shame, coercion, exposure, or manipulation.
         </p>
         <div className="hero-actions">
-          <a href="#engine">Try the Pretending Force Meter</a>
-          <a href="#mask-load" className="secondary">Open the Mask Load Calculator</a>
+          <a href="#frontstage">Map the Rooms</a>
+          <a href="#truth-planner" className="secondary">Plan a Safe Truth Step</a>
         </div>
       </section>
 
@@ -51,6 +55,8 @@ export function App() {
 
       <PretendingForceMeter />
       <MaskLoadCalculator />
+      <FrontstageBackstageMap />
+      <SafeTruthPlanner />
 
       <section id="atlas" className="atlas-section">
         <p className="section-kicker">Mask Atlas</p>
