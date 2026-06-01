@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 
-const APP_VERSION = '1.7.0';
+const APP_VERSION = '1.9.0';
 const STORAGE_TEST_KEY = 'personamirror369.trustCheck.localStorageTest';
 
 type CheckStatus = 'ok' | 'warn' | 'info';
