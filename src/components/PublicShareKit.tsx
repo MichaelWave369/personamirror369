@@ -2,21 +2,22 @@ import { useMemo, useState } from 'react';
 
 const liveUrl = 'https://michaelwave369.github.io/personamirror369/';
 const repoUrl = 'https://github.com/MichaelWave369/personamirror369';
+const doiUrl = 'https://doi.org/10.5281/zenodo.20483957';
 
 type ShareTemplate = 'oneLine' | 'publicPost' | 'repoPitch' | 'safetyNote';
 
 const templates: Record<ShareTemplate, { label: string; body: string }> = {
   oneLine: {
     label: 'One-line description',
-    body: 'PersonaMirror369 is a humane, local-first reflection app for noticing the masks we wear, mapping social pressure, and practicing safer truth without shame, coercion, or tracking.',
+    body: `PersonaMirror369 is a humane, local-first reflection app for noticing the masks we wear, mapping social pressure, and practicing safer truth without shame, coercion, or tracking. DOI: ${doiUrl}`,
   },
   publicPost: {
     label: 'Public post',
-    body: `I just launched PersonaMirror369: a local-first reflection app for the masks we wear. It includes a daily mirror card, private browser-only journal, local insights, a gentle integration planner, consent language builder, continuity backup tools, and trust checks. It is not a diagnosis tool or a persuasion system — it is a consent-based mirror for safer truth.\n\nLive app: ${liveUrl}\nRepo: ${repoUrl}`,
+    body: `I just released PersonaMirror369 v2.0.0: a local-first reflection app for the masks we wear. It includes a daily mirror card, private browser-only journal, local insights, a gentle integration planner, consent language builder, continuity backup tools, and trust checks. It is not a diagnosis tool or a persuasion system — it is a consent-based mirror for safer truth.\n\nLive app: ${liveUrl}\nRepo: ${repoUrl}\nDOI: ${doiUrl}`,
   },
   repoPitch: {
     label: 'Repo pitch',
-    body: 'PersonaMirror369 is a Vite/React/TypeScript local-first reflection system featuring mask taxonomy, Pretending Force formulas, local journaling, insights, integration planning, consent language practice, PWA support, and local continuity controls.',
+    body: `PersonaMirror369 is a Vite/React/TypeScript local-first reflection system featuring mask taxonomy, Pretending Force formulas, local journaling, insights, integration planning, consent language practice, PWA support, local continuity controls, and a Zenodo DOI: ${doiUrl}`,
   },
   safetyNote: {
     label: 'Safety note',
@@ -26,7 +27,7 @@ const templates: Record<ShareTemplate, { label: string; body: string }> = {
 
 export function PublicShareKit() {
   const [activeTemplate, setActiveTemplate] = useState<ShareTemplate>('publicPost');
-  const [customNote, setCustomNote] = useState('Built for consent-first self-reflection, anti-manipulation literacy, and local continuity.');
+  const [customNote, setCustomNote] = useState('Zenodo DOI minted for the v2.0.0 public release.');
   const [status, setStatus] = useState('');
 
   const selected = templates[activeTemplate];
@@ -65,6 +66,7 @@ export function PublicShareKit() {
       '## Links',
       `- Live app: ${liveUrl}`,
       `- Repository: ${repoUrl}`,
+      `- DOI: ${doiUrl}`,
       '',
       '## Boundary',
       templates.safetyNote.body,
@@ -80,7 +82,7 @@ export function PublicShareKit() {
         <p className="section-kicker">Public Share Kit</p>
         <h2>Share the project clearly without overclaiming.</h2>
         <p>
-          Copy public-safe descriptions, launch text, links, and safety boundaries for GitHub,
+          Copy public-safe descriptions, launch text, links, DOI, and safety boundaries for GitHub,
           social posts, portfolio notes, or project updates.
         </p>
       </div>
@@ -107,13 +109,16 @@ export function PublicShareKit() {
 
           <div className="share-link-card">
             <h3>Project links</h3>
-            <p>Live app and repo links are included so the launch message is ready to paste.</p>
+            <p>Live app, repo, and DOI links are included so the launch message is ready to paste.</p>
             <div className="report-actions">
               <button type="button" onClick={() => copyLink(liveUrl, 'live app link')}>
                 Copy live link
               </button>
               <button type="button" onClick={() => copyLink(repoUrl, 'repo link')}>
                 Copy repo link
+              </button>
+              <button type="button" onClick={() => copyLink(doiUrl, 'DOI link')}>
+                Copy DOI link
               </button>
             </div>
           </div>
