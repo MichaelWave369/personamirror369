@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.1.0 — Offline-Ready PWA Shell
+
+- Added PWA web manifest for installable app-shell metadata.
+- Added local-first service worker for app-shell caching and basic offline fallback.
+- Added service worker registration helper.
+- Added Offline Ready panel explaining installability, caching, and local-first boundaries.
+- Added PWA manifest metadata to `index.html`.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v1.0.0 — Public Release
 
 - Added Launch Compass for first-visit orientation.
