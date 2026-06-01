@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.7.0 — Local Trust Check
+
+- Added Local Trust Check for browser capability and local-first readiness diagnostics.
+- Added checks for app version, secure context, localStorage writability, service worker support, Cache API support, Clipboard API support, network status, and detected PersonaMirror369 caches.
+- Added refresh and copy-summary controls.
+- Added dedicated v1.7 stylesheet and wired it into the app.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v1.6.0 — Local Continuity Center
 
 - Upgraded Local Data Center into Local Continuity Center.
