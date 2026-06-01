@@ -16,6 +16,7 @@ import { LocalTrustCheck } from './components/LocalTrustCheck';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
 import { OfflineReadyPanel } from './components/OfflineReadyPanel';
 import { PretendingForceMeter } from './components/PretendingForceMeter';
+import { PublicShareKit } from './components/PublicShareKit';
 import { SafeTruthPlanner } from './components/SafeTruthPlanner';
 import { masks } from './data/masks';
 
@@ -24,6 +25,7 @@ export function App() {
     <main className="app-shell">
       <nav className="top-nav" aria-label="Primary navigation">
         <a href="#launch-compass">Start</a>
+        <a href="#share-kit">Share</a>
         <a href="#trust-check">Trust</a>
         <a href="#data-center">Data</a>
         <a href="#daily-deck">Daily Card</a>
@@ -46,17 +48,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v1.7 local trust check
+          v1.8 public share kit
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Verify local browser support, protect your continuity data, and keep the reflection loop
-          transparent, local-first, and consent-centered.
+          Share the project clearly, verify local trust, protect continuity data, and keep the
+          reflection loop transparent, local-first, and consent-centered.
         </p>
         <div className="hero-actions">
-          <a href="#trust-check">Open Trust Check</a>
-          <a href="#data-center" className="secondary">Open Continuity Center</a>
+          <a href="#share-kit">Open Share Kit</a>
+          <a href="#trust-check" className="secondary">Review Trust Check</a>
         </div>
       </section>
 
@@ -79,6 +81,7 @@ export function App() {
       </section>
 
       <LaunchCompass />
+      <PublicShareKit />
       <LocalTrustCheck />
       <LocalDataCenter />
       <OfflineReadyPanel />
