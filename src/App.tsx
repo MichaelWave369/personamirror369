@@ -12,6 +12,7 @@ import { LocalDataCenter } from './components/LocalDataCenter';
 import { LocalInsightsDashboard } from './components/LocalInsightsDashboard';
 import { LocalMirrorJournal } from './components/LocalMirrorJournal';
 import { LocalReflectionReport } from './components/LocalReflectionReport';
+import { LocalTrustCheck } from './components/LocalTrustCheck';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
 import { OfflineReadyPanel } from './components/OfflineReadyPanel';
 import { PretendingForceMeter } from './components/PretendingForceMeter';
@@ -23,6 +24,7 @@ export function App() {
     <main className="app-shell">
       <nav className="top-nav" aria-label="Primary navigation">
         <a href="#launch-compass">Start</a>
+        <a href="#trust-check">Trust</a>
         <a href="#data-center">Data</a>
         <a href="#daily-deck">Daily Card</a>
         <a href="#mirror-journal">Journal</a>
@@ -44,17 +46,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v1.5 consent language builder
+          v1.7 local trust check
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Notice recurring mask patterns, choose one humane focus, and build self-owned language for
-          boundaries, repair, consent, and safer truth without pressuring anyone.
+          Verify local browser support, protect your continuity data, and keep the reflection loop
+          transparent, local-first, and consent-centered.
         </p>
         <div className="hero-actions">
-          <a href="#consent-language">Open Language Builder</a>
-          <a href="#integration-planner" className="secondary">Back to Integration</a>
+          <a href="#trust-check">Open Trust Check</a>
+          <a href="#data-center" className="secondary">Open Continuity Center</a>
         </div>
       </section>
 
@@ -77,6 +79,7 @@ export function App() {
       </section>
 
       <LaunchCompass />
+      <LocalTrustCheck />
       <LocalDataCenter />
       <OfflineReadyPanel />
       <DailyMirrorDeck />
