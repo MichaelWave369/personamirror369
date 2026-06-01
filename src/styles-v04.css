@@ -13,7 +13,9 @@
 .guided-completion-card,
 .mirror-card-feature,
 .deck-meaning-card,
-.deck-mini-card {
+.deck-mini-card,
+.journal-list-card,
+.journal-entry-card {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--panel);
@@ -52,7 +54,11 @@
 .mirror-card-feature p,
 .mirror-card-feature blockquote,
 .deck-meaning-card p,
-.deck-mini-card strong {
+.deck-mini-card strong,
+.journal-list-card p,
+.journal-entry-card p,
+.journal-entry-card blockquote,
+.empty-journal {
   color: var(--muted);
   line-height: 1.6;
 }
@@ -73,7 +79,8 @@
 }
 
 .deck-panel,
-.guided-panel {
+.guided-panel,
+.journal-panel {
   scroll-margin-top: 96px;
 }
 
@@ -156,6 +163,54 @@
 
 .deck-mini-card strong {
   font-size: 0.78rem;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.95fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.journal-form,
+.journal-tools,
+.journal-entry-list {
+  display: grid;
+  gap: 16px;
+}
+
+.journal-select-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.journal-list-card {
+  position: sticky;
+  top: 98px;
+  padding: 24px;
+}
+
+.journal-entry-card {
+  padding: 18px;
+}
+
+.journal-entry-card h3 {
+  margin-bottom: 8px;
+  color: #fff5d6;
+  letter-spacing: -0.03em;
+}
+
+.journal-entry-meta {
+  color: var(--gold) !important;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.empty-journal {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 20px;
 }
 
 .guided-grid {
@@ -343,11 +398,14 @@
 @media (max-width: 980px) {
   .report-grid,
   .guided-grid,
-  .deck-grid {
+  .deck-grid,
+  .journal-grid,
+  .journal-select-row {
     grid-template-columns: 1fr;
   }
 
-  .report-preview-card {
+  .report-preview-card,
+  .journal-list-card {
     position: static;
   }
 }
