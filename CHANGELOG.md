@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.8.0 — Public Share Kit
+
+- Added Public Share Kit for copyable public-safe descriptions, launch posts, repo pitch text, links, and safety boundaries.
+- Added optional custom note field and Markdown launch-note download.
+- Added copy controls for live app link, repository link, and selected share text.
+- Added dedicated v1.8 stylesheet and wired it into the app.
+- Bumped service worker cache name to `personamirror369-v1-8-0` for cleaner GitHub Pages refresh behavior.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v1.7.0 — Local Trust Check
 
 - Added Local Trust Check for browser capability and local-first readiness diagnostics.
