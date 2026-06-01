@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.0 — Public Release
+
+- Added Launch Compass for first-visit orientation.
+- Added suggested first-visit path across Daily Card, Journal, Practice, and Vault.
+- Added safety/boundary cards for local-first design, reflection-not-diagnosis, consent-before-truth, and anti-manipulation stance.
+- Added module map quick links across the full PersonaMirror369 system.
+- Updated hero copy, navigation, README, styles, and package version for public release.
+
 ## v0.9.0 — Local Mirror Journal
 
 - Added Local Mirror Journal for daily continuity.
