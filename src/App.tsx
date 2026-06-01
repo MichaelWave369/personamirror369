@@ -9,6 +9,7 @@ import { LaunchCompass } from './components/LaunchCompass';
 import { LocalMirrorJournal } from './components/LocalMirrorJournal';
 import { LocalReflectionReport } from './components/LocalReflectionReport';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
+import { OfflineReadyPanel } from './components/OfflineReadyPanel';
 import { PretendingForceMeter } from './components/PretendingForceMeter';
 import { SafeTruthPlanner } from './components/SafeTruthPlanner';
 import { masks } from './data/masks';
@@ -21,6 +22,7 @@ export function App() {
         <a href="#daily-deck">Daily Card</a>
         <a href="#mirror-journal">Journal</a>
         <a href="#guided-practice">Practice</a>
+        <a href="#offline-ready">Offline</a>
         <a href="#engine">Pretending Force</a>
         <a href="#mask-load">Mask Load</a>
         <a href="#frontstage">Rooms</a>
@@ -34,17 +36,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v1.0 public release
+          v1.1 offline-ready PWA shell
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
           Start safely, pull a daily mirror card, keep a private local journal, recognize coercive
-          pressure, and export reflections you control without accounts or tracking.
+          pressure, and return through an offline-ready local-first app shell.
         </p>
         <div className="hero-actions">
           <a href="#launch-compass">Open Launch Compass</a>
-          <a href="#daily-deck" className="secondary">Pull Today’s Card</a>
+          <a href="#offline-ready" className="secondary">View Offline Notes</a>
         </div>
       </section>
 
@@ -67,6 +69,7 @@ export function App() {
       </section>
 
       <LaunchCompass />
+      <OfflineReadyPanel />
       <DailyMirrorDeck />
       <LocalMirrorJournal />
       <GuidedPracticeMode />
