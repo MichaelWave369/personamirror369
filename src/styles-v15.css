@@ -1,0 +1,124 @@
+.language-panel {
+  scroll-margin-top: 96px;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.language-config-card,
+.language-output-card,
+.language-mode-button,
+.saved-language-card,
+.saved-language-item {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--panel);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.language-config-card,
+.language-output-card,
+.saved-language-card {
+  padding: 24px;
+}
+
+.language-config-card {
+  display: grid;
+  gap: 16px;
+}
+
+.language-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.language-mode-button {
+  display: grid;
+  gap: 6px;
+  padding: 15px;
+  color: #f7f1e8;
+  text-align: left;
+}
+
+.language-mode-button.active,
+.language-mode-button:hover {
+  background: rgba(243, 201, 105, 0.14);
+  border-color: rgba(243, 201, 105, 0.34);
+}
+
+.language-mode-button span,
+.saved-language-item strong {
+  color: #fff5d6;
+  font-weight: 900;
+}
+
+.language-mode-button em,
+.language-output-card p,
+.language-output-card blockquote,
+.saved-language-card p,
+.saved-language-item p,
+.saved-language-item em {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.language-mode-button em,
+.saved-language-item em {
+  font-style: normal;
+}
+
+.language-output-card {
+  position: sticky;
+  top: 98px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(243, 201, 105, 0.14), transparent 18rem),
+    linear-gradient(145deg, rgba(169, 145, 255, 0.14), rgba(239, 159, 188, 0.08));
+}
+
+.language-output-card blockquote {
+  font-size: 1.25rem;
+}
+
+.saved-language-card {
+  margin-top: 22px;
+}
+
+.saved-language-list {
+  display: grid;
+  gap: 14px;
+}
+
+.saved-language-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px;
+}
+
+.saved-language-item button {
+  color: #170f1f;
+  background: var(--gold);
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 850;
+}
+
+@media (max-width: 980px) {
+  .language-grid,
+  .language-mode-grid,
+  .saved-language-item {
+    grid-template-columns: 1fr;
+  }
+
+  .language-output-card {
+    position: static;
+  }
+}
