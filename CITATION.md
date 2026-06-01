@@ -1,24 +1,26 @@
 # Citing PersonaMirror369
 
-PersonaMirror369 is preparing for a planned v2.0.0 Zenodo DOI release.
+PersonaMirror369 v2.0.0 is archived on Zenodo.
 
-Until the DOI is minted, cite the repository and live app directly:
+## Recommended Citation
 
-**Michael W. Hughes. PersonaMirror369: A Humane Atlas for the Masks We Wear. PHI369 Labs, 2026.**
+**Michael W. Hughes. PersonaMirror369: A Humane Atlas for the Masks We Wear. PHI369 Labs, 2026. https://doi.org/10.5281/zenodo.20483957**
 
-Repository:
+## DOI
+
+https://doi.org/10.5281/zenodo.20483957
+
+## Repository
+
 https://github.com/MichaelWave369/personamirror369
 
-Live app:
+## Live App
+
 https://michaelwave369.github.io/personamirror369/
 
-After the v2.0.0 Zenodo release is published, cite the Zenodo DOI for the archived release.
+## Release
 
-## Planned DOI Release
-
-Target release: `v2.0.0`
-
-Current release-candidate track: `v1.9.x`
+Release: `v2.0.0`
 
 ## Notes
 
