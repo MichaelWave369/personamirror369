@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.9.0 — Local Mirror Journal
+
+- Added Local Mirror Journal for daily continuity.
+- Added browser-only journal persistence with localStorage.
+- Added entry composer with title, mask, room, pressure signal, reflection, and next step.
+- Added saved-entry list with delete controls.
+- Added search and mask filtering.
+- Added Markdown and JSON journal exports.
+- Added safe parsing for locally saved entries.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v0.8.0 — Daily Mirror Deck
 
 - Added Daily Mirror Deck for daily-return reflection.
