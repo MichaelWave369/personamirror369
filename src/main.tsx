@@ -4,6 +4,7 @@ import { App } from './App';
 import { registerServiceWorker } from './registerServiceWorker';
 import './styles.css';
 import './styles-v04.css';
+import './styles-v12.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
