@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.9.0 — Zenodo Release Candidate Pack
+
+- Added MIT `LICENSE` file.
+- Added `.zenodo.json` metadata draft for the planned DOI release.
+- Added `RELEASE_NOTES_v2.0.0_DRAFT.md` for the target citable release.
+- Added `docs/CLAIM_BOUNDARIES.md` for public claim discipline.
+- Added `docs/PUBLIC_RELEASE_CHECKLIST.md` for the v2.0.0 release process.
+- Updated README with v1.9 release-candidate status and v2.0.0 DOI target.
+- Note: `CITATION.cff` still needs to be added before v2.0.0; connector safety checks blocked the attempted structured citation file payload.
+
 ## v1.8.0 — Public Share Kit
 
 - Added Public Share Kit for copyable public-safe descriptions, launch posts, repo pitch text, links, and safety boundaries.
@@ -83,24 +93,3 @@
 - Added safety/boundary cards for local-first design, reflection-not-diagnosis, consent-before-truth, and anti-manipulation stance.
 - Added module map quick links across the full PersonaMirror369 system.
 - Updated hero copy, navigation, README, styles, and package version for public release.
-
-## v0.9.0 — Local Mirror Journal
-
-- Added Local Mirror Journal for daily continuity.
-- Added browser-only journal persistence with localStorage.
-- Added entry composer with title, mask, room, pressure signal, reflection, and next step.
-- Added saved-entry list with delete controls.
-- Added search and mask filtering.
-- Added Markdown and JSON journal exports.
-- Added safe parsing for locally saved entries.
-- Updated hero copy, navigation, README, styles, and package version.
-
-## v0.8.0 — Daily Mirror Deck
-
-- Added Daily Mirror Deck for daily-return reflection.
-- Added deterministic Today’s Card based on the current date.
-- Added random draw and next-card controls.
-- Added full deck mini-card selector.
-- Added copyable mirror-card insight.
-- Added Carry to Vault bridge.
-- Updated hero copy, navigation, README, styles, and package version.
