@@ -47,6 +47,7 @@ It is not designed for:
 
 | Module | Purpose | Status |
 |---|---|---|
+| Launch Compass | First-visit orientation, quick start, and safety boundaries | v1.0 |
 | Mask Atlas | Taxonomy of common social masks | Implemented v0.1 |
 | Pretending Force Engine | Formula system for social/persona pressure | Interactive v0.2 |
 | Mask Load Model | Measures intensity, frequency, rigidity, truth-distance, and duration | Interactive v0.2 |
@@ -135,7 +136,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v0.9 local mirror journal`
+Version: `v1.0 public release`
 
 This repo currently contains:
 
@@ -145,6 +146,7 @@ This repo currently contains:
 - mask taxonomy
 - product spec
 - Vite / React / TypeScript app
+- Launch Compass
 - Daily Mirror Deck
 - Local Mirror Journal
 - interactive Pretending Force Meter
