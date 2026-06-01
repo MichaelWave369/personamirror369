@@ -27,6 +27,7 @@ PersonaMirror369 is designed for:
 - gentle integration planning
 - self-owned consent language practice
 - full local continuity backup and cleanup
+- local trust and browser capability checks
 - offline-ready app-shell access
 - social literacy
 - anti-manipulation education
@@ -55,6 +56,7 @@ It is not designed for:
 | Launch Compass | First-visit orientation, quick start, and safety boundaries | v1.0 |
 | Offline Ready PWA Shell | Manifest, service worker, and offline/local-first notes | v1.1 |
 | Local Data Center / Continuity Center | Local storage inventory, full backup, import, and cleanup controls | v1.6 |
+| Local Trust Check | Browser capability and local-first readiness diagnostics | v1.7 |
 | Local Insights Dashboard | Local journal pattern summaries without diagnosis or scoring | v1.3 |
 | Gentle Integration Planner | Seven-day local practice plan without streak pressure | v1.4 |
 | Consent Language Builder | Self-owned language for boundaries, repair, clarity, and consent | v1.5 |
@@ -146,7 +148,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v1.6 local continuity center`
+Version: `v1.7 local trust check`
 
 This repo currently contains:
 
@@ -159,6 +161,7 @@ This repo currently contains:
 - Launch Compass
 - Offline Ready panel
 - Local Data Center / Continuity Center
+- Local Trust Check
 - Local Insights Dashboard
 - Gentle Integration Planner
 - Consent Language Builder
