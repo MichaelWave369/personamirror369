@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.2.0 — Local Data Center
+
+- Added Local Data Center for browser storage visibility and cleanup.
+- Added localStorage inventory for Local Mirror Journal and Local Report Vault Draft.
+- Added local data backup export and clipboard copy.
+- Added backup import for known PersonaMirror369 localStorage keys.
+- Added one-key clear controls and clear-all journal/report cleanup.
+- Added app-shell cache cleanup for PersonaMirror369 service worker caches.
+- Added dedicated v1.2 stylesheet and wired it into the app.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v1.1.0 — Offline-Ready PWA Shell
 
 - Added PWA web manifest for installable app-shell metadata.
