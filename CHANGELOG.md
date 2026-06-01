@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.3.0 — Local Insights Dashboard
+
+- Added Local Insights Dashboard reading only browser-local journal entries.
+- Added mask, room, and pressure pattern summaries.
+- Added most-common mask, room, pressure, and next-step stats.
+- Added recent journal thread view.
+- Added copyable/downloadable local insights summary.
+- Added dedicated v1.3 stylesheet and wired it into the app.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v1.2.0 — Local Data Center
 
 - Added Local Data Center for browser storage visibility and cleanup.
