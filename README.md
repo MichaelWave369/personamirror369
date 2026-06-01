@@ -56,6 +56,7 @@ It is not designed for:
 |---|---|---|
 | Launch Compass | First-visit orientation, quick start, and safety boundaries | v1.0 |
 | Public Share Kit | Copyable public-safe launch text, links, and safety boundaries | v1.8 |
+| Zenodo Release Candidate Pack | License, Zenodo metadata, claim boundaries, and v2 release checklist | v1.9 |
 | Offline Ready PWA Shell | Manifest, service worker, and offline/local-first notes | v1.1 |
 | Local Data Center / Continuity Center | Local storage inventory, full backup, import, and cleanup controls | v1.6 |
 | Local Trust Check | Browser capability and local-first readiness diagnostics | v1.7 |
@@ -150,7 +151,9 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v1.8 public share kit`
+Version: `v1.9 Zenodo release candidate pack`
+
+Target DOI release: `v2.0.0`
 
 This repo currently contains:
 
@@ -162,6 +165,11 @@ This repo currently contains:
 - Vite / React / TypeScript app
 - Launch Compass
 - Public Share Kit
+- Zenodo metadata draft
+- MIT License
+- draft v2.0.0 release notes
+- public claim boundaries document
+- public release checklist
 - Offline Ready panel
 - Local Data Center / Continuity Center
 - Local Trust Check
@@ -183,6 +191,14 @@ This repo currently contains:
 - Guided Practice Mode pathways
 - GitHub Pages workflow
 - TypeScript data model for masks and formulas
+
+## Release Candidate Files
+
+- `LICENSE`
+- `.zenodo.json`
+- `RELEASE_NOTES_v2.0.0_DRAFT.md`
+- `docs/CLAIM_BOUNDARIES.md`
+- `docs/PUBLIC_RELEASE_CHECKLIST.md`
 
 ## Local Development
 
