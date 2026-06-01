@@ -5,6 +5,7 @@ import { DailyMirrorDeck } from './components/DailyMirrorDeck';
 import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { GroupPretendingSimulator } from './components/GroupPretendingSimulator';
 import { GuidedPracticeMode } from './components/GuidedPracticeMode';
+import { LocalMirrorJournal } from './components/LocalMirrorJournal';
 import { LocalReflectionReport } from './components/LocalReflectionReport';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
 import { PretendingForceMeter } from './components/PretendingForceMeter';
@@ -16,6 +17,7 @@ export function App() {
     <main className="app-shell">
       <nav className="top-nav" aria-label="Primary navigation">
         <a href="#daily-deck">Daily Card</a>
+        <a href="#mirror-journal">Journal</a>
         <a href="#guided-practice">Practice</a>
         <a href="#engine">Pretending Force</a>
         <a href="#mask-load">Mask Load</a>
@@ -30,17 +32,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.8 daily mirror deck
+          v0.9 local mirror journal
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Pull a daily mirror card, start a guided pathway, map personal masks, recognize coercive
-          pressure, and save portable local reflection drafts without accounts or tracking.
+          Pull a daily mirror card, keep a private local journal, start guided practice, recognize
+          coercive pressure, and save portable reflection drafts without accounts or tracking.
         </p>
         <div className="hero-actions">
-          <a href="#daily-deck">Pull Today’s Card</a>
-          <a href="#guided-practice" className="secondary">Start Guided Practice</a>
+          <a href="#mirror-journal">Open Local Journal</a>
+          <a href="#daily-deck" className="secondary">Pull Today’s Card</a>
         </div>
       </section>
 
@@ -63,6 +65,7 @@ export function App() {
       </section>
 
       <DailyMirrorDeck />
+      <LocalMirrorJournal />
       <GuidedPracticeMode />
       <PretendingForceMeter />
       <MaskLoadCalculator />
