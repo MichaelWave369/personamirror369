@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.4.0 — Gentle Integration Planner
+
+- Added Gentle Integration Planner for turning one local insight into a seven-day practice plan.
+- Added focus mask, focus room, intention, truth safety need, and support anchor fields.
+- Added editable seven-day practice steps with completion tracking.
+- Added local save, load, and clear controls for the integration plan.
+- Added Markdown and JSON export plus copyable summary.
+- Added dedicated v1.4 stylesheet and wired it into the app.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v1.3.0 — Local Insights Dashboard
 
 - Added Local Insights Dashboard reading only browser-local journal entries.
