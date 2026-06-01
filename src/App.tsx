@@ -6,6 +6,7 @@ import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { GroupPretendingSimulator } from './components/GroupPretendingSimulator';
 import { GuidedPracticeMode } from './components/GuidedPracticeMode';
 import { LaunchCompass } from './components/LaunchCompass';
+import { LocalDataCenter } from './components/LocalDataCenter';
 import { LocalMirrorJournal } from './components/LocalMirrorJournal';
 import { LocalReflectionReport } from './components/LocalReflectionReport';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
@@ -19,6 +20,7 @@ export function App() {
     <main className="app-shell">
       <nav className="top-nav" aria-label="Primary navigation">
         <a href="#launch-compass">Start</a>
+        <a href="#data-center">Data</a>
         <a href="#daily-deck">Daily Card</a>
         <a href="#mirror-journal">Journal</a>
         <a href="#guided-practice">Practice</a>
@@ -36,17 +38,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v1.1 offline-ready PWA shell
+          v1.2 local data center
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Start safely, pull a daily mirror card, keep a private local journal, recognize coercive
-          pressure, and return through an offline-ready local-first app shell.
+          Start safely, pull a daily mirror card, keep a private local journal, and control your
+          browser-stored reflections with clear export, import, and cleanup tools.
         </p>
         <div className="hero-actions">
-          <a href="#launch-compass">Open Launch Compass</a>
-          <a href="#offline-ready" className="secondary">View Offline Notes</a>
+          <a href="#data-center">Open Local Data Center</a>
+          <a href="#launch-compass" className="secondary">Open Launch Compass</a>
         </div>
       </section>
 
@@ -69,6 +71,7 @@ export function App() {
       </section>
 
       <LaunchCompass />
+      <LocalDataCenter />
       <OfflineReadyPanel />
       <DailyMirrorDeck />
       <LocalMirrorJournal />
