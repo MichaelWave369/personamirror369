@@ -19,7 +19,8 @@
 .launch-feature-card,
 .launch-boundary-card,
 .module-map-card,
-.release-note-card {
+.release-note-card,
+.offline-card {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--panel);
@@ -66,7 +67,8 @@
 .launch-feature-card p,
 .launch-boundary-card p,
 .module-map-card strong,
-.release-note-card p {
+.release-note-card p,
+.offline-card p {
   color: var(--muted);
   line-height: 1.6;
 }
@@ -87,10 +89,28 @@
 }
 
 .launch-panel,
+.offline-panel,
 .deck-panel,
 .guided-panel,
 .journal-panel {
   scroll-margin-top: 96px;
+}
+
+.offline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.offline-card {
+  padding: 22px;
+  background: linear-gradient(145deg, rgba(169, 145, 255, 0.12), rgba(243, 201, 105, 0.08));
+}
+
+.offline-card h3 {
+  margin-bottom: 10px;
+  color: #fff5d6;
+  letter-spacing: -0.035em;
 }
 
 .launch-grid {
@@ -477,7 +497,8 @@
   .society-grid,
   .scenario-strip,
   .deck-strip,
-  .module-map-strip {
+  .module-map-strip,
+  .offline-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -508,7 +529,8 @@
   .scenario-strip,
   .deck-strip,
   .deck-meaning-grid,
-  .module-map-strip {
+  .module-map-strip,
+  .offline-grid {
     grid-template-columns: 1fr;
   }
 
