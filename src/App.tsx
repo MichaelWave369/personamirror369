@@ -7,6 +7,7 @@ import { GroupPretendingSimulator } from './components/GroupPretendingSimulator'
 import { GuidedPracticeMode } from './components/GuidedPracticeMode';
 import { LaunchCompass } from './components/LaunchCompass';
 import { LocalDataCenter } from './components/LocalDataCenter';
+import { LocalInsightsDashboard } from './components/LocalInsightsDashboard';
 import { LocalMirrorJournal } from './components/LocalMirrorJournal';
 import { LocalReflectionReport } from './components/LocalReflectionReport';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
@@ -23,6 +24,7 @@ export function App() {
         <a href="#data-center">Data</a>
         <a href="#daily-deck">Daily Card</a>
         <a href="#mirror-journal">Journal</a>
+        <a href="#local-insights">Insights</a>
         <a href="#guided-practice">Practice</a>
         <a href="#offline-ready">Offline</a>
         <a href="#engine">Pretending Force</a>
@@ -38,17 +40,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v1.2 local data center
+          v1.3 local insights dashboard
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Start safely, pull a daily mirror card, keep a private local journal, and control your
-          browser-stored reflections with clear export, import, and cleanup tools.
+          Start safely, pull a daily mirror card, keep a private local journal, and notice recurring
+          mask patterns without turning yourself into a score.
         </p>
         <div className="hero-actions">
-          <a href="#data-center">Open Local Data Center</a>
-          <a href="#launch-compass" className="secondary">Open Launch Compass</a>
+          <a href="#local-insights">Open Local Insights</a>
+          <a href="#mirror-journal" className="secondary">Add Journal Entry</a>
         </div>
       </section>
 
@@ -75,6 +77,7 @@ export function App() {
       <OfflineReadyPanel />
       <DailyMirrorDeck />
       <LocalMirrorJournal />
+      <LocalInsightsDashboard />
       <GuidedPracticeMode />
       <PretendingForceMeter />
       <MaskLoadCalculator />
