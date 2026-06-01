@@ -1,0 +1,33 @@
+{
+  "title": "PersonaMirror369: A Humane Atlas for the Masks We Wear",
+  "upload_type": "software",
+  "description": "PersonaMirror369 is a local-first React and TypeScript reflection application for personal journaling, guided practice, local insights, browser-based data export, and consent-centered self-reflection.",
+  "creators": [
+    {
+      "name": "Hughes, Michael W.",
+      "affiliation": "PHI369 Labs"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "local-first software",
+    "reflection tool",
+    "journaling",
+    "humane technology",
+    "React",
+    "TypeScript"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/MichaelWave369/personamirror369",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://michaelwave369.github.io/personamirror369/",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "version": "1.9.0"
+}
