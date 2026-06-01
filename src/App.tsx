@@ -48,13 +48,13 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v1.8 public share kit
+          v1.9 Zenodo release candidate
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Share the project clearly, verify local trust, protect continuity data, and keep the
-          reflection loop transparent, local-first, and consent-centered.
+          Prepare the v2.0.0 DOI release, share the project clearly, verify local trust, protect
+          continuity data, and keep the reflection loop transparent, local-first, and consent-centered.
         </p>
         <div className="hero-actions">
           <a href="#share-kit">Open Share Kit</a>
