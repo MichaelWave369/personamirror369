@@ -15,7 +15,11 @@
 .deck-meaning-card,
 .deck-mini-card,
 .journal-list-card,
-.journal-entry-card {
+.journal-entry-card,
+.launch-feature-card,
+.launch-boundary-card,
+.module-map-card,
+.release-note-card {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--panel);
@@ -58,7 +62,11 @@
 .journal-list-card p,
 .journal-entry-card p,
 .journal-entry-card blockquote,
-.empty-journal {
+.empty-journal,
+.launch-feature-card p,
+.launch-boundary-card p,
+.module-map-card strong,
+.release-note-card p {
   color: var(--muted);
   line-height: 1.6;
 }
@@ -78,10 +86,92 @@
   margin-bottom: 0;
 }
 
+.launch-panel,
 .deck-panel,
 .guided-panel,
 .journal-panel {
   scroll-margin-top: 96px;
+}
+
+.launch-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.launch-feature-card {
+  padding: 28px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(243, 201, 105, 0.16), transparent 18rem),
+    linear-gradient(145deg, rgba(169, 145, 255, 0.14), rgba(239, 159, 188, 0.08));
+}
+
+.launch-feature-card h3,
+.release-note-card h3 {
+  font-size: clamp(1.8rem, 4vw, 3.3rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  margin-bottom: 18px;
+}
+
+.launch-steps {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.launch-steps li::marker {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.launch-steps a,
+.module-map-card span {
+  color: #fff5d6;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.launch-boundary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.launch-boundary-card,
+.release-note-card {
+  padding: 20px;
+}
+
+.launch-boundary-card h4 {
+  margin: 0 0 8px;
+  color: #fff5d6;
+}
+
+.module-map-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.module-map-card {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.module-map-card:hover {
+  background: rgba(243, 201, 105, 0.14);
+  border-color: rgba(243, 201, 105, 0.34);
+}
+
+.release-note-card {
+  margin-top: 22px;
+  background: linear-gradient(145deg, rgba(243, 201, 105, 0.12), rgba(239, 159, 188, 0.1));
 }
 
 .deck-grid {
@@ -386,7 +476,8 @@
 @media (max-width: 1100px) {
   .society-grid,
   .scenario-strip,
-  .deck-strip {
+  .deck-strip,
+  .module-map-strip {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -400,7 +491,9 @@
   .guided-grid,
   .deck-grid,
   .journal-grid,
-  .journal-select-row {
+  .journal-select-row,
+  .launch-grid,
+  .launch-boundary-grid {
     grid-template-columns: 1fr;
   }
 
@@ -414,7 +507,8 @@
   .society-grid,
   .scenario-strip,
   .deck-strip,
-  .deck-meaning-grid {
+  .deck-meaning-grid,
+  .module-map-strip {
     grid-template-columns: 1fr;
   }
 
