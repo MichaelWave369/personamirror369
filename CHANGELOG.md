@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.0.0 — Zenodo Public DOI Release
+
+- Published PersonaMirror369 v2.0.0 as the first citable Zenodo DOI release.
+- DOI minted: https://doi.org/10.5281/zenodo.20483957
+- Added DOI badge and DOI section to README.
+- Updated `CITATION.md` with recommended citation and DOI.
+- Updated `CITATION.cff` with DOI metadata.
+- Updated `RELEASE_NOTES_v2.0.0.md` with DOI and completed post-DOI patch notes.
+- Updated Public Share Kit with DOI-aware launch text and copy controls.
+- Marked Zenodo release checklist complete.
+
 ## v1.9.0 — Zenodo Release Candidate Pack
 
 - Added MIT `LICENSE` file.
@@ -8,7 +19,7 @@
 - Added `docs/CLAIM_BOUNDARIES.md` for public claim discipline.
 - Added `docs/PUBLIC_RELEASE_CHECKLIST.md` for the v2.0.0 release process.
 - Updated README with v1.9 release-candidate status and v2.0.0 DOI target.
-- Note: `CITATION.cff` still needs to be added before v2.0.0; connector safety checks blocked the attempted structured citation file payload.
+- Note: `CITATION.cff` was added successfully before the final v2.0.0 DOI patch.
 
 ## v1.8.0 — Public Share Kit
 
@@ -92,4 +103,4 @@
 - Added suggested first-visit path across Daily Card, Journal, Practice, and Vault.
 - Added safety/boundary cards for local-first design, reflection-not-diagnosis, consent-before-truth, and anti-manipulation stance.
 - Added module map quick links across the full PersonaMirror369 system.
-- Updated hero copy, navigation, README, styles, and package version for public release.
+- Updated hero copy, navigation, README, styles, and package version.
