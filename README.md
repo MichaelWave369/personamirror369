@@ -25,6 +25,7 @@ PersonaMirror369 is designed for:
 - local mirror journaling
 - local insights without scoring the person
 - gentle integration planning
+- self-owned consent language practice
 - local data visibility and cleanup
 - offline-ready app-shell access
 - social literacy
@@ -56,6 +57,7 @@ It is not designed for:
 | Local Data Center | Local storage inventory, backup, import, and cleanup controls | v1.2 |
 | Local Insights Dashboard | Local journal pattern summaries without diagnosis or scoring | v1.3 |
 | Gentle Integration Planner | Seven-day local practice plan without streak pressure | v1.4 |
+| Consent Language Builder | Self-owned language for boundaries, repair, clarity, and consent | v1.5 |
 | Mask Atlas | Taxonomy of common social masks | Implemented v0.1 |
 | Pretending Force Engine | Formula system for social/persona pressure | Interactive v0.2 |
 | Mask Load Model | Measures intensity, frequency, rigidity, truth-distance, and duration | Interactive v0.2 |
@@ -144,7 +146,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v1.4 gentle integration planner`
+Version: `v1.5 consent language builder`
 
 This repo currently contains:
 
@@ -159,6 +161,7 @@ This repo currently contains:
 - Local Data Center
 - Local Insights Dashboard
 - Gentle Integration Planner
+- Consent Language Builder
 - PWA manifest
 - local-first service worker
 - Daily Mirror Deck
