@@ -1,0 +1,13 @@
+{
+  "name": "PersonaMirror369",
+  "short_name": "PersonaMirror",
+  "description": "A humane, local-first atlas for the masks we wear.",
+  "start_url": "/personamirror369/",
+  "scope": "/personamirror369/",
+  "display": "standalone",
+  "background_color": "#120d19",
+  "theme_color": "#120d19",
+  "orientation": "portrait-primary",
+  "categories": ["health", "education", "productivity", "lifestyle"],
+  "lang": "en-US"
+}
