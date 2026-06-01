@@ -1,4 +1,4 @@
-const CACHE_NAME = 'personamirror369-v1-8-0';
+const CACHE_NAME = 'personamirror369-v1-9-0';
 const APP_SHELL = [
   '/personamirror369/',
   '/personamirror369/index.html',
