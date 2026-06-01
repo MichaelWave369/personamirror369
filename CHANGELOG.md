@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.5.0 — Consent Language Builder
+
+- Added Consent Language Builder for self-owned boundary, repair, clarification, consent, and slow-down language.
+- Added mode and tone selectors with editable observation, feeling, need, and request fields.
+- Added local copy, save, delete, clear, Markdown download, and JSON export controls.
+- Added safe local parsing for saved language entries.
+- Added dedicated v1.5 stylesheet and wired it into the app.
+- Updated hero copy, navigation, README, styles, and package version.
+
 ## v1.4.0 — Gentle Integration Planner
 
 - Added Gentle Integration Planner for turning one local insight into a seven-day practice plan.
