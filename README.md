@@ -28,6 +28,7 @@ PersonaMirror369 is designed for:
 - self-owned consent language practice
 - full local continuity backup and cleanup
 - local trust and browser capability checks
+- public-safe sharing and launch notes
 - offline-ready app-shell access
 - social literacy
 - anti-manipulation education
@@ -54,6 +55,7 @@ It is not designed for:
 | Module | Purpose | Status |
 |---|---|---|
 | Launch Compass | First-visit orientation, quick start, and safety boundaries | v1.0 |
+| Public Share Kit | Copyable public-safe launch text, links, and safety boundaries | v1.8 |
 | Offline Ready PWA Shell | Manifest, service worker, and offline/local-first notes | v1.1 |
 | Local Data Center / Continuity Center | Local storage inventory, full backup, import, and cleanup controls | v1.6 |
 | Local Trust Check | Browser capability and local-first readiness diagnostics | v1.7 |
@@ -148,7 +150,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v1.7 local trust check`
+Version: `v1.8 public share kit`
 
 This repo currently contains:
 
@@ -159,6 +161,7 @@ This repo currently contains:
 - product spec
 - Vite / React / TypeScript app
 - Launch Compass
+- Public Share Kit
 - Offline Ready panel
 - Local Data Center / Continuity Center
 - Local Trust Check
