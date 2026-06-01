@@ -23,6 +23,7 @@ PersonaMirror369 is designed for:
 - guided personal practice
 - daily mirror-card reflection
 - local mirror journaling
+- local insights without scoring the person
 - local data visibility and cleanup
 - offline-ready app-shell access
 - social literacy
@@ -52,6 +53,7 @@ It is not designed for:
 | Launch Compass | First-visit orientation, quick start, and safety boundaries | v1.0 |
 | Offline Ready PWA Shell | Manifest, service worker, and offline/local-first notes | v1.1 |
 | Local Data Center | Local storage inventory, backup, import, and cleanup controls | v1.2 |
+| Local Insights Dashboard | Local journal pattern summaries without diagnosis or scoring | v1.3 |
 | Mask Atlas | Taxonomy of common social masks | Implemented v0.1 |
 | Pretending Force Engine | Formula system for social/persona pressure | Interactive v0.2 |
 | Mask Load Model | Measures intensity, frequency, rigidity, truth-distance, and duration | Interactive v0.2 |
@@ -140,7 +142,7 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v1.2 local data center`
+Version: `v1.3 local insights dashboard`
 
 This repo currently contains:
 
@@ -153,6 +155,7 @@ This repo currently contains:
 - Launch Compass
 - Offline Ready panel
 - Local Data Center
+- Local Insights Dashboard
 - PWA manifest
 - local-first service worker
 - Daily Mirror Deck
