@@ -1,6 +1,6 @@
 # PersonaMirror369 Public Release Checklist
 
-This checklist is for the planned v2.0.0 Zenodo DOI release.
+This checklist is for the v2.0.0 Zenodo DOI release.
 
 ## Freeze Status
 
@@ -27,7 +27,7 @@ See: `docs/FEATURE_FREEZE_v1.9.0.md`
 - [x] GitHub Actions build is green.
 - [x] GitHub Pages deploy is green.
 - [x] Live app loads at the configured Pages URL.
-- [ ] Service worker cache refresh behavior has been checked.
+- [x] Service worker cache refresh behavior has been checked.
 
 ## App Readiness
 
@@ -53,10 +53,14 @@ See: `docs/FEATURE_FREEZE_v1.9.0.md`
 
 ## Zenodo Release Steps
 
-- [ ] Create GitHub release tag `v2.0.0`.
-- [ ] Confirm Zenodo archive is created from the GitHub release.
-- [ ] Confirm Zenodo metadata.
-- [ ] Publish Zenodo release.
-- [ ] Copy DOI.
-- [ ] Add DOI badge/link to README after publication.
-- [ ] Announce using the Public Share Kit.
+- [x] Create GitHub release tag `v2.0.0`.
+- [x] Confirm Zenodo archive is created from the GitHub release.
+- [x] Confirm Zenodo metadata.
+- [x] Publish Zenodo release.
+- [x] Copy DOI.
+- [x] Add DOI badge/link to README after publication.
+- [x] Announce using the Public Share Kit.
+
+## DOI
+
+https://doi.org/10.5281/zenodo.20483957
