@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Eye, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
 import { AntiManipulationMode } from './components/AntiManipulationMode';
+import { ConsentLanguageBuilder } from './components/ConsentLanguageBuilder';
 import { DailyMirrorDeck } from './components/DailyMirrorDeck';
 import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { GentleIntegrationPlanner } from './components/GentleIntegrationPlanner';
@@ -27,6 +28,7 @@ export function App() {
         <a href="#mirror-journal">Journal</a>
         <a href="#local-insights">Insights</a>
         <a href="#integration-planner">Integrate</a>
+        <a href="#consent-language">Language</a>
         <a href="#guided-practice">Practice</a>
         <a href="#offline-ready">Offline</a>
         <a href="#engine">Pretending Force</a>
@@ -42,17 +44,17 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v1.4 gentle integration planner
+          v1.5 consent language builder
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Notice recurring mask patterns, choose one humane focus, and turn it into seven tiny,
-          repairable practice steps without streak pressure or self-improvement shame.
+          Notice recurring mask patterns, choose one humane focus, and build self-owned language for
+          boundaries, repair, consent, and safer truth without pressuring anyone.
         </p>
         <div className="hero-actions">
-          <a href="#integration-planner">Open Integration Planner</a>
-          <a href="#local-insights" className="secondary">Review Local Insights</a>
+          <a href="#consent-language">Open Language Builder</a>
+          <a href="#integration-planner" className="secondary">Back to Integration</a>
         </div>
       </section>
 
@@ -81,6 +83,7 @@ export function App() {
       <LocalMirrorJournal />
       <LocalInsightsDashboard />
       <GentleIntegrationPlanner />
+      <ConsentLanguageBuilder />
       <GuidedPracticeMode />
       <PretendingForceMeter />
       <MaskLoadCalculator />
