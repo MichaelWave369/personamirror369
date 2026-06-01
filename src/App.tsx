@@ -5,6 +5,7 @@ import { DailyMirrorDeck } from './components/DailyMirrorDeck';
 import { FrontstageBackstageMap } from './components/FrontstageBackstageMap';
 import { GroupPretendingSimulator } from './components/GroupPretendingSimulator';
 import { GuidedPracticeMode } from './components/GuidedPracticeMode';
+import { LaunchCompass } from './components/LaunchCompass';
 import { LocalMirrorJournal } from './components/LocalMirrorJournal';
 import { LocalReflectionReport } from './components/LocalReflectionReport';
 import { MaskLoadCalculator } from './components/MaskLoadCalculator';
@@ -16,6 +17,7 @@ export function App() {
   return (
     <main className="app-shell">
       <nav className="top-nav" aria-label="Primary navigation">
+        <a href="#launch-compass">Start</a>
         <a href="#daily-deck">Daily Card</a>
         <a href="#mirror-journal">Journal</a>
         <a href="#guided-practice">Practice</a>
@@ -32,16 +34,16 @@ export function App() {
       <section className="hero">
         <div className="eyebrow">
           <Sparkles size={18} />
-          v0.9 local mirror journal
+          v1.0 public release
         </div>
         <h1>PersonaMirror369</h1>
         <p className="subtitle">A humane atlas for the masks we wear.</p>
         <p className="hero-copy">
-          Pull a daily mirror card, keep a private local journal, start guided practice, recognize
-          coercive pressure, and save portable reflection drafts without accounts or tracking.
+          Start safely, pull a daily mirror card, keep a private local journal, recognize coercive
+          pressure, and export reflections you control without accounts or tracking.
         </p>
         <div className="hero-actions">
-          <a href="#mirror-journal">Open Local Journal</a>
+          <a href="#launch-compass">Open Launch Compass</a>
           <a href="#daily-deck" className="secondary">Pull Today’s Card</a>
         </div>
       </section>
@@ -64,6 +66,7 @@ export function App() {
         />
       </section>
 
+      <LaunchCompass />
       <DailyMirrorDeck />
       <LocalMirrorJournal />
       <GuidedPracticeMode />
