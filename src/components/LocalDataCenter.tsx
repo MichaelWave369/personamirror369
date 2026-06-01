@@ -11,6 +11,16 @@ const STORAGE_KEYS = [
     label: 'Local Report Vault Draft',
     description: 'One saved report draft stored in this browser.',
   },
+  {
+    key: 'personamirror369.gentleIntegrationPlan.v1',
+    label: 'Gentle Integration Plan',
+    description: 'One saved seven-day integration plan stored in this browser.',
+  },
+  {
+    key: 'personamirror369.consentLanguageBuilder.v1',
+    label: 'Consent Language Builder',
+    description: 'Saved self-owned consent language drafts stored in this browser.',
+  },
 ];
 
 interface StorageRow {
@@ -23,7 +33,7 @@ interface StorageRow {
 }
 
 interface PersonaMirrorBackup {
-  schemaVersion: 1;
+  schemaVersion: 2;
   app: 'PersonaMirror369';
   exportedAt: string;
   localStorage: Record<string, string | null>;
@@ -35,9 +45,10 @@ export function LocalDataCenter() {
   const [status, setStatus] = useState('');
 
   const totalBytes = useMemo(() => rows.reduce((sum, row) => sum + row.bytes, 0), [rows]);
+  const activeKeyCount = useMemo(() => rows.filter((row) => row.exists).length, [rows]);
   const backup = useMemo<PersonaMirrorBackup>(
     () => ({
-      schemaVersion: 1,
+      schemaVersion: 2,
       app: 'PersonaMirror369',
       exportedAt: new Date().toISOString(),
       localStorage: Object.fromEntries(STORAGE_KEYS.map((item) => [item.key, localStorage.getItem(item.key)])),
@@ -52,7 +63,7 @@ export function LocalDataCenter() {
   async function copyBackup() {
     try {
       await navigator.clipboard.writeText(JSON.stringify(backup, null, 2));
-      setStatus('Copied local data backup JSON.');
+      setStatus('Copied full local continuity backup JSON.');
     } catch {
       setStatus('Clipboard copy was blocked. Use Download Backup instead.');
     }
@@ -60,11 +71,11 @@ export function LocalDataCenter() {
 
   function downloadBackup() {
     downloadFile(
-      'personamirror369-local-data-backup.json',
+      'personamirror369-local-continuity-backup.json',
       JSON.stringify(backup, null, 2),
       'application/json;charset=utf-8',
     );
-    setStatus('Downloaded local data backup JSON.');
+    setStatus('Downloaded full local continuity backup JSON.');
   }
 
   function importBackup() {
@@ -83,7 +94,7 @@ export function LocalDataCenter() {
       });
 
       refresh();
-      setStatus('Imported known PersonaMirror369 local data keys. Reload the page to sync all visible modules.');
+      setStatus('Imported known PersonaMirror369 local continuity keys. Reload the page to sync all visible modules.');
     } catch {
       setStatus('Could not import backup. Check that the pasted text is valid JSON.');
     }
@@ -92,13 +103,13 @@ export function LocalDataCenter() {
   function clearKey(key: string) {
     localStorage.removeItem(key);
     refresh();
-    setStatus('Cleared one local data key. Reload the page to sync all visible modules.');
+    setStatus('Cleared one local continuity key. Reload the page to sync all visible modules.');
   }
 
   function clearAllLocalData() {
     STORAGE_KEYS.forEach((item) => localStorage.removeItem(item.key));
     refresh();
-    setStatus('Cleared PersonaMirror369 journal/report local data in this browser. Reload to sync all modules.');
+    setStatus('Cleared all known PersonaMirror369 local continuity data in this browser. Reload to sync all modules.');
   }
 
   async function clearAppCaches() {
@@ -116,18 +127,19 @@ export function LocalDataCenter() {
   return (
     <section id="data-center" className="panel interactive-panel data-center-panel">
       <div className="panel-heading">
-        <p className="section-kicker">Local Data Center</p>
-        <h2>See, export, import, or clear what this browser stores.</h2>
+        <p className="section-kicker">Local Continuity Center</p>
+        <h2>See, export, import, or clear every known local module key.</h2>
         <p>
-          PersonaMirror369 stores journal and report drafts locally in your browser only. This panel
-          makes that storage visible and gives you direct control over backups and cleanup.
+          PersonaMirror369 stores journal entries, report drafts, integration plans, and consent
+          language locally in your browser only. This panel makes that storage visible and gives you
+          direct control over backups and cleanup.
         </p>
       </div>
 
       <div className="data-center-grid">
         <article className="data-control-card">
           <div className="mask-card-topline">
-            <span>Local inventory</span>
+            <span>{activeKeyCount} active local keys</span>
             <span>{formatBytes(totalBytes)}</span>
           </div>
           <div className="data-row-list">
@@ -152,13 +164,13 @@ export function LocalDataCenter() {
               Refresh scan
             </button>
             <button type="button" onClick={downloadBackup}>
-              Download backup
+              Download full backup
             </button>
             <button type="button" onClick={copyBackup}>
-              Copy backup
+              Copy full backup
             </button>
             <button type="button" onClick={clearAllLocalData}>
-              Clear journal/report data
+              Clear all local module data
             </button>
             <button type="button" onClick={clearAppCaches}>
               Clear app cache
@@ -176,11 +188,11 @@ export function LocalDataCenter() {
             Reload after importing so every module refreshes its visible state.
           </p>
           <label className="text-field">
-            <span>Import local data backup</span>
+            <span>Import local continuity backup</span>
             <textarea
               value={importText}
               onChange={(event) => setImportText(event.target.value)}
-              placeholder="Paste personamirror369-local-data-backup.json contents here."
+              placeholder="Paste personamirror369-local-continuity-backup.json contents here."
             />
           </label>
           <div className="report-actions">
@@ -191,9 +203,9 @@ export function LocalDataCenter() {
           <div className="data-safety-note">
             <h3>Boundary note</h3>
             <p>
-              Clearing app cache removes cached public app files. Clearing journal/report data removes
-              private local drafts and entries from this browser. Neither action touches exported files
-              you saved elsewhere.
+              Clearing app cache removes cached public app files. Clearing local module data removes
+              private PersonaMirror369 drafts, entries, plans, and saved language from this browser.
+              Neither action touches exported files you saved elsewhere.
             </p>
           </div>
           {status ? <p className="report-status">{status}</p> : null}
@@ -227,6 +239,16 @@ function summarizeValue(key: string, value: string | null): string {
     if (key.includes('localReflectionReport') && parsed && typeof parsed === 'object') {
       const savedAt = 'savedAt' in parsed && typeof parsed.savedAt === 'string' ? parsed.savedAt : 'unknown time';
       return `One report draft saved locally at ${savedAt}.`;
+    }
+
+    if (key.includes('gentleIntegrationPlan') && parsed && typeof parsed === 'object') {
+      const savedAt = 'savedAt' in parsed && typeof parsed.savedAt === 'string' ? parsed.savedAt : 'unknown time';
+      const dayCount = 'days' in parsed && Array.isArray(parsed.days) ? parsed.days.length : 0;
+      return `One integration plan saved locally at ${savedAt} with ${dayCount} practice days.`;
+    }
+
+    if (key.includes('consentLanguageBuilder') && Array.isArray(parsed)) {
+      return `${parsed.length} saved consent language entr${parsed.length === 1 ? 'y' : 'ies'} stored locally.`;
     }
   } catch {
     return 'Local data exists, but could not be summarized as JSON.';
