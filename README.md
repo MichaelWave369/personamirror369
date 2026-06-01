@@ -1,11 +1,19 @@
 # PersonaMirror369
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20483957.svg)](https://doi.org/10.5281/zenodo.20483957)
+
 **A humane atlas for the masks we wear.**
 
 PersonaMirror369 is a consent-based research, reflection, and interactive software project for mapping the everyday masks people wear, understanding the social pressures that create them, and helping individuals and communities reduce unhealthy pretending without shame, coercion, exposure, or manipulation.
 
 > We do not rip masks off people.  
 > We help people feel safe enough to set them down.
+
+## DOI
+
+PersonaMirror369 v2.0.0 is archived on Zenodo:
+
+https://doi.org/10.5281/zenodo.20483957
 
 ## Core Idea
 
@@ -55,7 +63,7 @@ It is not designed for:
 | Module | Purpose | Status |
 |---|---|---|
 | Launch Compass | First-visit orientation, quick start, and safety boundaries | v1.0 |
-| Public Share Kit | Copyable public-safe launch text, links, and safety boundaries | v1.8 |
+| Public Share Kit | Copyable public-safe launch text, links, DOI, and safety boundaries | v1.8+DOI |
 | Zenodo Release Candidate Pack | License, Zenodo metadata, claim boundaries, and v2 release checklist | v1.9 |
 | Offline Ready PWA Shell | Manifest, service worker, and offline/local-first notes | v1.1 |
 | Local Data Center / Continuity Center | Local storage inventory, full backup, import, and cleanup controls | v1.6 |
@@ -151,9 +159,9 @@ Prison Mask     = unconscious + chronic + fear-based + identity-fused
 
 ## Current Status
 
-Version: `v1.9 Zenodo release candidate pack`
+Version: `v2.0.0 Zenodo Public DOI Release`
 
-Target DOI release: `v2.0.0`
+DOI: https://doi.org/10.5281/zenodo.20483957
 
 This repo currently contains:
 
@@ -165,9 +173,9 @@ This repo currently contains:
 - Vite / React / TypeScript app
 - Launch Compass
 - Public Share Kit
-- Zenodo metadata draft
+- Zenodo metadata
 - MIT License
-- draft v2.0.0 release notes
+- v2.0.0 release notes
 - public claim boundaries document
 - public release checklist
 - Offline Ready panel
@@ -192,11 +200,13 @@ This repo currently contains:
 - GitHub Pages workflow
 - TypeScript data model for masks and formulas
 
-## Release Candidate Files
+## Release Files
 
 - `LICENSE`
 - `.zenodo.json`
-- `RELEASE_NOTES_v2.0.0_DRAFT.md`
+- `CITATION.cff`
+- `CITATION.md`
+- `RELEASE_NOTES_v2.0.0.md`
 - `docs/CLAIM_BOUNDARIES.md`
 - `docs/PUBLIC_RELEASE_CHECKLIST.md`
 
