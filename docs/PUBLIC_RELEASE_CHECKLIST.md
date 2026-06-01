@@ -2,6 +2,16 @@
 
 This checklist is for the planned v2.0.0 Zenodo DOI release.
 
+## Freeze Status
+
+- [x] v1.9.0 feature freeze declared.
+- [x] GitHub Actions build is green.
+- [x] GitHub Pages deploy is green.
+- [x] Live app click-through passed.
+- [ ] No new features added before v2.0.0.
+
+See: `docs/FEATURE_FREEZE_v1.9.0.md`
+
 ## Repository Readiness
 
 - [ ] README is current.
@@ -14,25 +24,23 @@ This checklist is for the planned v2.0.0 Zenodo DOI release.
 
 ## Build Readiness
 
-- [ ] `npm install` completes.
-- [ ] `npm run build` completes.
-- [ ] GitHub Actions build is green.
-- [ ] GitHub Pages deploy is green.
-- [ ] Live app loads at the configured Pages URL.
+- [x] GitHub Actions build is green.
+- [x] GitHub Pages deploy is green.
+- [x] Live app loads at the configured Pages URL.
 - [ ] Service worker cache refresh behavior has been checked.
 
 ## App Readiness
 
-- [ ] Launch Compass is visible.
-- [ ] Public Share Kit is visible.
-- [ ] Local Trust Check is visible.
-- [ ] Local Continuity Center is visible.
-- [ ] Daily Mirror Deck works.
-- [ ] Local Mirror Journal saves locally.
-- [ ] Local Insights Dashboard reads local journal entries.
-- [ ] Gentle Integration Planner saves and exports.
-- [ ] Consent Language Builder saves and exports.
-- [ ] Local Reflection Vault exports and imports.
+- [x] Launch Compass is visible.
+- [x] Public Share Kit is visible.
+- [x] Local Trust Check is visible.
+- [x] Local Continuity Center is visible.
+- [x] Daily Mirror Deck works.
+- [x] Local Mirror Journal saves locally.
+- [x] Local Insights Dashboard reads local journal entries.
+- [x] Gentle Integration Planner saves and exports.
+- [x] Consent Language Builder saves and exports.
+- [x] Local Reflection Vault exports and imports.
 
 ## Boundary Readiness
 
