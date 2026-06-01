@@ -8,19 +8,19 @@ This checklist is for the planned v2.0.0 Zenodo DOI release.
 - [x] GitHub Actions build is green.
 - [x] GitHub Pages deploy is green.
 - [x] Live app click-through passed.
-- [ ] No new features added before v2.0.0.
+- [x] No new app features added before v2.0.0.
 
 See: `docs/FEATURE_FREEZE_v1.9.0.md`
 
 ## Repository Readiness
 
-- [ ] README is current.
-- [ ] CHANGELOG is current.
-- [ ] LICENSE is present and correct.
-- [ ] Zenodo metadata is present and accurate.
-- [ ] Claim boundaries document is present.
-- [ ] Draft v2.0.0 release notes are finalized.
-- [ ] Citation instructions are clear.
+- [x] README is current.
+- [x] CHANGELOG is current.
+- [x] LICENSE is present and correct.
+- [x] Zenodo metadata is present and accurate.
+- [x] Claim boundaries document is present.
+- [x] Final v2.0.0 release notes are present.
+- [x] Citation instructions are clear.
 
 ## Build Readiness
 
@@ -44,12 +44,12 @@ See: `docs/FEATURE_FREEZE_v1.9.0.md`
 
 ## Boundary Readiness
 
-- [ ] The app does not present itself as therapy.
-- [ ] The app does not present itself as diagnosis.
-- [ ] The app does not claim scientific validation of formulas.
-- [ ] The app does not encourage forced disclosure.
-- [ ] The app does not encourage profiling people without consent.
-- [ ] The app clearly states local-first boundaries.
+- [x] The app does not present itself as therapy.
+- [x] The app does not present itself as diagnosis.
+- [x] The app does not claim scientific validation of formulas.
+- [x] The app does not encourage forced disclosure.
+- [x] The app does not encourage profiling people without consent.
+- [x] The app clearly states local-first boundaries.
 
 ## Zenodo Release Steps
 
