@@ -1,14 +1,15 @@
 # PersonaMirror369 v2.0.0 — Zenodo Public DOI Release
 
-**Status:** Final release notes for the planned first citable Zenodo release.  
+**Status:** Final Zenodo DOI release.  
 **Release candidate baseline:** v1.9.0  
-**Target release tag:** v2.0.0
+**Release tag:** v2.0.0  
+**DOI:** https://doi.org/10.5281/zenodo.20483957
 
 ## Summary
 
 PersonaMirror369 is a humane, local-first reflection application for exploring everyday masks, social pressure, private journaling, local continuity, guided practice, and consent-centered self-reflection.
 
-The v2.0.0 release is intended to be the first citable Zenodo release of the project.
+The v2.0.0 release is the first citable Zenodo release of the project.
 
 ## Included System Modules
 
@@ -61,16 +62,20 @@ The included formulas are reflection aids and design tools. They are not validat
 
 - Repository: https://github.com/MichaelWave369/personamirror369
 - Live app: https://michaelwave369.github.io/personamirror369/
+- DOI: https://doi.org/10.5281/zenodo.20483957
 
 ## Citation
 
-After the v2.0.0 GitHub release is archived with Zenodo, cite the Zenodo DOI generated for that release.
+Please cite the v2.0.0 Zenodo DOI for this archived release:
 
-## Post-DOI Patch Plan
+https://doi.org/10.5281/zenodo.20483957
 
-After Zenodo publishes the DOI:
+## Post-DOI Patch
 
-- add DOI badge/link to README;
-- update CITATION.md with DOI;
-- update release notes with DOI if needed;
-- update public share language if needed.
+Completed after Zenodo publication:
+
+- DOI badge/link added to README;
+- CITATION.md updated with DOI;
+- CITATION.cff updated with DOI;
+- release notes updated with DOI;
+- public share language updated with DOI.
