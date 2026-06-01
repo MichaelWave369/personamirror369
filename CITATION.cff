@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: Please cite this software using the metadata below.
+title: PersonaMirror369
+type: software
+authors:
+  - family-names: Hughes
+    given-names: Michael W.
+version: 2.0.0
+license: MIT
+repository-code: https://github.com/MichaelWave369/personamirror369
+url: https://michaelwave369.github.io/personamirror369/
